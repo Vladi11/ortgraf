@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'Century Gothic';
+	src: url('/assets/fonts/CenturyGothic.eot');
+	src: local('Century Gothic'), local('CenturyGothic'),
+		url('/assets/fonts/CenturyGothic.eot?#iefix') format('embedded-opentype'),
+		url('/assets/fonts/CenturyGothic.woff') format('woff'),
+		url('/assets/fonts/CenturyGothic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Century Gothic';
+	src: url('/assets/fonts/CenturyGothic-Bold.eot');
+	src: local('Century Gothic Bold'), local('CenturyGothic-Bold'),
+		url('/assets/fonts/CenturyGothic-Bold.eot?#iefix') format('embedded-opentype'),
+		url('/assets/fonts/CenturyGothic-Bold.woff') format('woff'),
+		url('/assets/fonts/CenturyGothic-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueCyr';
+	src: url('/assets/fonts/HelveticaNeueCyr-Roman.eot');
+	src: local('HelveticaNeueCyr-Roman'),
+		url('/assets/fonts/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
+		url('/assets/fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
+		url('/assets/fonts/HelveticaNeueCyr-Roman.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

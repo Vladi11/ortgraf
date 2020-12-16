@@ -1,0 +1,317 @@
+@import "utils/utils";
+
+body {
+    font-family: $main-font;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.section {
+    padding: 100px 0;
+    @include media-m {
+        padding: 50px 0;
+    }
+
+    &__headline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 60px;
+        @include media-m {
+            margin-bottom: 50px;
+        }
+
+        &_nearby {
+            justify-content: flex-start;
+        }
+
+        &_spaced {
+            margin-bottom: 90px;
+        }
+    }
+
+    .title {
+        margin-right: 36px;
+        @include media-m {
+            font-size: 28px;
+        }
+    }
+}
+
+.wrapper {
+    max-width: 1232px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 48px;
+    line-height: 1.3;
+    color: $black;
+    font-weight: normal;
+    text-transform: uppercase;
+    @include media-m {
+        text-transform: none;
+    }
+
+    &_white {
+        color: $white;
+    }
+}
+
+.button {
+    border: 1px solid $grey;
+    padding: 11px 15px;
+    text-transform: uppercase;
+    color: $black;
+    background: transparent;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .3s ease;
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.1s linear;
+
+    span {
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s linear;
+        width: 100%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: -75%;
+        left: 0;
+        width: 0;
+        height: 250%;
+        transition: all 0.4s ease-in-out;
+        background: $red;
+        border-radius: 0 50% 50% 0;
+    }
+
+    svg {
+        max-width: 30px;
+        max-height: 30px;
+        margin-right: 11px;
+        fill: $white;
+        transition: all 0.3s linear;
+        position: relative;
+        z-index: 1;
+    }
+
+    &:hover {
+        color: $white;
+        border-color: $white;
+
+        &::after {
+            width: 150%;
+        }
+    }
+
+    &_white {
+        color: $white;
+        padding: 11px 20px;
+    }
+
+    &_red {
+        background: $red;
+        color: $white;
+        border-color: $red;
+        font-size: 16px;
+        padding: 18px 40px;
+        font-weight: bold;
+        @include media-m {
+            padding: 14px 40px;
+        }
+
+        &::after {
+            background: $white;
+        }
+
+        &:hover {
+            color: $red;
+            border-color: $red;
+
+            svg {
+                fill: $red !important;
+            }
+        }
+    }
+
+    &_icon {
+        display: flex;
+        align-items: center;
+        padding: 13px 25px;
+        font-size: 14px;
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    @include media-m {
+        justify-content: center;
+    }
+
+    a {
+        display: block;
+        max-width: 24px;
+        max-height: 24px;
+
+        &:not(:last-child) {
+            margin-right: 35px;
+        }
+    }
+
+    svg {
+        max-width: 24px;
+        max-height: 24px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            fill: $red;
+        }
+    }
+}
+
+.slider-arrows {
+    width: calc(100% + 64px*2*2);
+    position: absolute;
+    top: calc(50% - 64px/2);
+    left: calc(-64px*2);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    height: 0;
+    @include media-xxxl {
+        width: calc(100% + 36px*2*2);
+        left: calc(-36px*2);
+    }
+    @include media-xxl {
+        display: none;
+    }
+    
+    &__arrow {
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $grey;
+        background: $white;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 14px;
+            height: 14px;
+            transform: rotate(45deg);
+            border: 1px solid $black;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+            background: $black;
+            border-color: $black;
+
+            &::after {
+                border-color: $white;
+            }
+        }
+
+        &_prew {
+            &::after {
+               margin-right: -9px; 
+               border-top: none;
+               border-right: none;
+            }
+        }
+
+        &_next {
+            &::after {
+               margin-left: -9px; 
+               border-bottom: none;
+               border-left: none;
+            }
+        }
+    }
+}
+
+.swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+
+    &-bullet{
+        background: $white;
+        width: 6px;
+        height: 6px;
+    
+        &-active {
+            background: $grey-dark;
+        }
+    
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+}
+
+.swiper-scrollbar {
+    display: flex;
+    align-items: center;
+    height: 2px;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.25);
+    width: 98%;
+    left: 1%;
+    top: 50px;
+    z-index: 4;
+    @include media-m {
+        top: 30px;
+    }
+
+    &_dark {
+        background: #BDBDBD;
+    }
+
+    &-drag {
+        background: $red;
+        cursor: pointer;
+        border-radius: 0;
+        transition: all 0.07s linear;
+
+        &:hover,
+        &:active {
+            height: 4px;
+            margin-top: -1px;
+        }
+    }
+}
+
+@import "__header";
+@import "pages/pages";
+@import "__footer";
+
+.mobile {
+    @media screen and (min-width: calc(#{$breakpoint-m} + 1px)) {
+        display: none;
+    }
+}
+
+.desktop {
+    @include media-m {
+        display: none;
+    }
+}
