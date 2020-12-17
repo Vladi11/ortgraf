@@ -1,16 +1,42 @@
 import Swiper from 'swiper/bundle';
+import AOS from 'aos';
 
 $(document).ready(function () {
 
-    var swiper = new Swiper('.solutions-slider>.swiper-container', {
+    AOS.init({
+        disable: false,
+        startEvent: 'DOMContentLoaded',
+        initClassName: 'aos-init',
+        animatedClassName: 'aos-animate',
+        useClassNames: false,
+        disableMutationObserver: false,
+        debounceDelay: 50,
+        throttleDelay: 99,
+        offset: 120,
+        delay: 0,
+        duration: 400,
+        easing: 'ease',
+        once: false,
+        mirror: false,
+        anchorPlacement: 'top-bottom'
+    });
+
+    let sliderSolution = new Swiper('.solutions-slider>.swiper-container', {
         slidesPerView: 1,
         spaceBetween: 8,
         navigation: {
             nextEl: '.solutions-slider__next',
             prevEl: '.solutions-slider__prev',
         },
+        autoplay: {
+            delay: 5000,
+        },
         breakpoints: {
-            '@0.8': {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1200: {
                 slidesPerView: 4,
                 spaceBetween: 30,
             }
@@ -22,7 +48,7 @@ $(document).ready(function () {
         }
     });
 
-    var swiper2 = new Swiper('.lamps-slider>.swiper-container', {
+    let sliderLamps = new Swiper('.lamps-slider>.swiper-container', {
         slidesPerView: 2,
         spaceBetween: 8,
         navigation: {
@@ -30,13 +56,16 @@ $(document).ready(function () {
             prevEl: '.lamps-slider__prev',
         },
         breakpoints: {
-            '@0.8': {
+            768: {
+                slidesPerView: 4,
+            },
+            992: {
                 slidesPerView: 6,
             }
         },
     });
 
-    var swiper3 = new Swiper('.reviews-slider>.swiper-container', {
+    let sliderReviews = new Swiper('.reviews-slider>.swiper-container', {
         slidesPerView: 2,
         spaceBetween: 9,
         scrollbar: {
@@ -45,13 +74,13 @@ $(document).ready(function () {
             draggable: true
         },
         breakpoints: {
-            '@0.8': {
+            650: {
                 slidesPerView: 3,
             }
         }
     });
 
-    var swiper4 = new Swiper('.projects-slider>.swiper-container', {
+    let sliderProjects = new Swiper('.projects-slider>.swiper-container', {
         slidesPerView: 1,
         spaceBetween: 30,
         navigation: {
@@ -64,32 +93,43 @@ $(document).ready(function () {
             draggable: true
         },
         breakpoints: {
-            '@0.8': {
+            768: {
+                slidesPerView: 3,
+            },
+            992: {
                 slidesPerView: 4,
             }
         }
     });
 
-    var swiper5 = new Swiper('.information-slider>.swiper-container', {
+    let sliderInformation = new Swiper('.information-slider>.swiper-container', {
         slidesPerView: 1,
+        loop: true,
         pagination: {
             el: '.information-slider__pagination',
             clickable: true
-        }
+        },
+        autoplay: {
+            delay: 3000,
+        },
     });
 
-    var swiper6 = new Swiper('.news-slider>.swiper-container', {
+    let sliderNews = new Swiper('.news-slider>.swiper-container', {
         slidesPerView: 1,
+        loop: true,
         pagination: {
             el: '.news-slider__pagination',
             clickable: true
-        }
+        },
+        autoplay: {
+            delay: 3000,
+        },
     });
 
     $('.burger').on('click', function () {
         $('.main-menu').toggleClass('open');
         $(this).toggleClass('active');
-        $('.main-menu__list').removeClass('open');
+        $('.main-menu__submenu').removeClass('open');
     });
 
     $('.main-menu__title_open').on('click', function () {
