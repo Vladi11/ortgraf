@@ -5,6 +5,12 @@
         padding: 50px 0;
     }
 
+    &__big {
+        @include media-l {
+            display: none;
+        }
+    }
+
     &__grid {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
@@ -22,7 +28,7 @@
         }
 
         a {
-            font-size: 18px;
+            font-size: rem(18);
             line-height: 1.7;
             color: $white;
         }
@@ -76,8 +82,9 @@
     }
 
     &__social {
-        @include media-m {
+        @include media-l {
             margin-top: 40px;
+            justify-content: center;
         }
 
         svg {
@@ -96,7 +103,7 @@
 
 .footer-nav {
     &__title {
-        font-size: 20px;
+        font-size: rem(20);
         line-height: 1.5;
         padding-bottom: 30px;
         color: $white;
@@ -125,6 +132,10 @@
 }
 
 .footer-mobile {
+    @media screen and (min-width: calc(#{$breakpoint-l} + 1px)) {
+        display: none;
+    }
+
     &__row {
         display: flex;
         justify-content: space-between;
@@ -141,7 +152,7 @@
         }
 
         a {
-            font-size: 18px;
+            font-size: rem(18);
             line-height: 1.7;
             color: $white;
         }
@@ -150,6 +161,9 @@
     &__buttons {
         width: 50%;
         text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
 
         .button {
             color: $white;
