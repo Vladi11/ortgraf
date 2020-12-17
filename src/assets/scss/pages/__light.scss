@@ -477,39 +477,40 @@
         height: 300px;
         overflow: hidden;
 
-        &::after {
+        &::before {
             content: '';
-            position: absolute;
             display: block;
             width: 100%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.75);
+            top: 0;
+            left: 0;
             opacity: 0;
-            transition: all .3s ease;
+            transition: all 0.3s ease-in-out;
+            background: rgba(255, 255, 255, 0.8);
             z-index: 1;
         }
 
-        &::before {
+        &::after {
             content: 'посмотреть проект';
-            text-transform: uppercase;
             position: absolute;
             color: $red;
             font-size: 14px;
             position: absolute;
-            top: calc(50% - 16px/2);
-            left: -100%;
+            top: calc(50% - 38px/2);
+            left: calc(50% - 158.5px/2);
             transition: all .3s ease;
+            padding: 10px;
+            border: 1px solid $red;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
             z-index: 2;
         } 
 
         &:hover {
-            &::after {
+            &::after,
+            &::before {
                 opacity: 1;
             }
-    
-            &::before {
-                left: calc(50% - 146px/2);
-            } 
         }
     }
 }
@@ -699,6 +700,7 @@
         align-items: center;
         padding: 0 18px;
         transition: all 0.3s ease;
+        overflow: hidden;
         @include media-l {
             max-width: 100%;
             flex-direction: column;
@@ -722,8 +724,9 @@
             font-size: 24px;
             color: $black;
             border: none;
-            max-width: 76%;
             @include media-l {
+                min-width: 100%;
+                width: 100%;
                 max-width: 100%;
                 border: 1px solid $grey;
                 margin: 10px 0 30px;
@@ -734,6 +737,7 @@
 
     .button {
         @include media-l {
+            min-width: 100%;
             width: 100%;
             text-align: center;
         }
