@@ -5,6 +5,9 @@
     background-repeat: no-repeat;
     position: relative;
     padding: 0;
+    @include media-m {
+        padding: 0;
+    }
 
     &::after {
         content: "";
@@ -29,6 +32,7 @@
         z-index: 1;
         @include media-m {
             padding: 43px 0;
+            min-height: calc(100vh - 71px);
         }
     }
 
