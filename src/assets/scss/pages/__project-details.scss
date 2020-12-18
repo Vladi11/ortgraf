@@ -30,8 +30,6 @@
         grid-gap: 35px 30px;
         @include media-l {
             grid-template-columns: repeat(2, 1fr);
-        }
-        @include media-m {
             margin-top: 50px;
         }
         @media screen and (max-width: 750px) {
