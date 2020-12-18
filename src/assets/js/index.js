@@ -136,6 +136,31 @@ $(document).ready(function () {
         }
     });
 
+    let sliderProjectsThumbs = new Swiper('.projects-gallery__thumbs>.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        scrollbar: {
+            el: '.projects-gallery__scrollbar',
+            hide: false,
+            draggable: true,
+        }
+    });
+
+    let sliderProjectsGalleryTop = new Swiper('.projects-gallery__top>.swiper-container', {
+        spaceBetween: 20,
+        slidesPerView: 1,
+        navigation: {
+            nextEl: '.projects-gallery__next',
+            prevEl: '.projects-gallery__prew',
+        },
+        thumbs: {
+            swiper: sliderProjectsThumbs
+        }
+    });
+
     $('.burger').on('click', function () {
         $('.main-menu').toggleClass('open');
         $(this).toggleClass('active');
