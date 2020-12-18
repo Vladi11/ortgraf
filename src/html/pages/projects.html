@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ОРТГРАФ - Проекты</title>
+    <title>ОРТГРАФ СВЕТ - Реализованные проекты</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <% for (key in htmlWebpackPlugin.files.css) { %>
     <link href="<%= htmlWebpackPlugin.files.css[key] %>" rel="stylesheet" /><% } %>
@@ -33,7 +33,7 @@
         <section class="section projects-filters">
             <div class="wrapper">
                 <div class="projects-filters__options">
-                    <div class="projects-filters__buttons">
+                    <div class="projects-filters__buttons desktop">
                         <button class="button projects-filters__button"><span>Магазины</span></button>
                         <button class="button projects-filters__button"><span>Офисы</span></button>
                         <button class="button projects-filters__button"><span>Промышленное</span></button>
@@ -42,11 +42,27 @@
                         <button class="button projects-filters__button"><span>Складское освещение</span></button>
                         <button class="button projects-filters__button"><span>Спортивное освещение</span></button>
                         <button class="button projects-filters__button"><span>Для музеев и выставок</span></button>
-                        <button class="button projects-filters__button"><span>Спортивное освещение</span></button>
                         <button class="button projects-filters__button"><span>Административное освещение</span></button>
                         <button class="button projects-filters__button"><span>Для частных домов</span></button>
                         <button class="button projects-filters__button"><span>Архитектурное</span></button>
                         <button class="button projects-filters__button"><span>Интеллектуальное освещение</span></button>
+                    </div>
+                    <div class="select projects-filters__select mobile">
+                        <select name="projects-select" id="projects-select">
+                            <option value="Все категории" selected>Все категории</option>
+                            <option value="Магазины">Магазины</option>
+                            <option value="Офисы">Офисы</option>
+                            <option value="Промышленное">Промышленное</option>
+                            <option value="Рестораны и кафе">Рестораны и кафе</option>
+                            <option value="Уличное освещение">Уличное освещение</option>
+                            <option value="Складское освещение">Складское освещение</option>
+                            <option value="Спортивное освещение">Спортивное освещение</option>
+                            <option value="Для музеев и выставок">Для музеев и выставок</option>
+                            <option value="Административное освещение">Административное освещение</option>
+                            <option value="Для частных домов">Для частных домов</option>
+                            <option value="Архитектурное">Архитектурное</option>
+                            <option value="Интеллектуальное освещение">Интеллектуальное освещение</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -57,8 +73,10 @@
                 <div class="projects-example__grid">
                     <a href="" class="projects-example__item project-item" data-aos="zoom-in">
                         <h3 class="project-item__title">Название проекта<br>в две строки или<br>в три строки</h3>
-                        <div class="project-item__picture" style="background-image: url(/assets/img/project-item-1.jpg);"></div>
-                        <p class="project-item__descr">Здесь идет небольшое описание реализованного проекта в несколько строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
+                        <div class="project-item__picture"
+                            style="background-image: url(/assets/img/project-item-1.jpg);"></div>
+                        <p class="project-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
+                            строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
                         <p class="project-item__subtitle">Реализовано</p>
                         <ul class="project-item__list">
                             <li class="project-item__item"><span>замена всех фасадных ламп</span></li>
@@ -67,8 +85,10 @@
                     </a>
                     <a href="" class="projects-example__item project-item" data-aos="zoom-in">
                         <h3 class="project-item__title">Астраханский государственный</h3>
-                        <div class="project-item__picture" style="background-image: url(/assets/img/project-item-2.jpg);"></div>
-                        <p class="project-item__descr">Здесь идет небольшое описание реализованного проекта в несколько строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
+                        <div class="project-item__picture"
+                            style="background-image: url(/assets/img/project-item-2.jpg);"></div>
+                        <p class="project-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
+                            строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
                         <p class="project-item__subtitle">Реализовано</p>
                         <ul class="project-item__list">
                             <li class="project-item__item"><span>замена всех фасадных ламп</span></li>
@@ -77,8 +97,10 @@
                     </a>
                     <a href="" class="projects-example__item project-item" data-aos="zoom-in">
                         <h3 class="project-item__title">Бизнес-отель<br>“Спектр”</h3>
-                        <div class="project-item__picture" style="background-image: url(/assets/img/project-item-3.jpg);"></div>
-                        <p class="project-item__descr">Здесь идет небольшое описание реализованного проекта в несколько строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
+                        <div class="project-item__picture"
+                            style="background-image: url(/assets/img/project-item-3.jpg);"></div>
+                        <p class="project-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
+                            строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
                         <p class="project-item__subtitle">Реализовано</p>
                         <ul class="project-item__list">
                             <li class="project-item__item"><span>замена всех фасадных ламп</span></li>
@@ -87,8 +109,10 @@
                     </a>
                     <a href="" class="projects-example__item project-item" data-aos="zoom-in">
                         <h3 class="project-item__title">Бизнес-отель<br>“Невский Центр”</h3>
-                        <div class="project-item__picture" style="background-image: url(/assets/img/project-item-4.jpg);"></div>
-                        <p class="project-item__descr">Здесь идет небольшое описание реализованного проекта в несколько строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
+                        <div class="project-item__picture"
+                            style="background-image: url(/assets/img/project-item-4.jpg);"></div>
+                        <p class="project-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
+                            строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
                         <p class="project-item__subtitle">Реализовано</p>
                         <ul class="project-item__list">
                             <li class="project-item__item"><span>замена всех фасадных ламп</span></li>
@@ -97,8 +121,10 @@
                     </a>
                     <a href="" class="projects-example__item project-item" data-aos="zoom-in">
                         <h3 class="project-item__title">Название проекта<br>в две строки или<br>в три строки</h3>
-                        <div class="project-item__picture" style="background-image: url(/assets/img/project-item-5.jpg);"></div>
-                        <p class="project-item__descr">Здесь идет небольшое описание реализованного проекта в несколько строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
+                        <div class="project-item__picture"
+                            style="background-image: url(/assets/img/project-item-5.jpg);"></div>
+                        <p class="project-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
+                            строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
                         <p class="project-item__subtitle">Реализовано</p>
                         <ul class="project-item__list">
                             <li class="project-item__item"><span>замена всех фасадных ламп</span></li>
@@ -107,8 +133,10 @@
                     </a>
                     <a href="" class="projects-example__item project-item" data-aos="zoom-in">
                         <h3 class="project-item__title">Астраханский государственный</h3>
-                        <div class="project-item__picture" style="background-image: url(/assets/img/project-item-6.jpg);"></div>
-                        <p class="project-item__descr">Здесь идет небольшое описание реализованного проекта в несколько строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
+                        <div class="project-item__picture"
+                            style="background-image: url(/assets/img/project-item-6.jpg);"></div>
+                        <p class="project-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
+                            строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
                         <p class="project-item__subtitle">Реализовано</p>
                         <ul class="project-item__list">
                             <li class="project-item__item"><span>замена всех фасадных ламп</span></li>
@@ -117,8 +145,10 @@
                     </a>
                     <a href="" class="projects-example__item project-item" data-aos="zoom-in">
                         <h3 class="project-item__title">Бизнес-отель<br>“Спектр”</h3>
-                        <div class="project-item__picture" style="background-image: url(/assets/img/project-item-7.jpg);"></div>
-                        <p class="project-item__descr">Здесь идет небольшое описание реализованного проекта в несколько строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
+                        <div class="project-item__picture"
+                            style="background-image: url(/assets/img/project-item-7.jpg);"></div>
+                        <p class="project-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
+                            строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
                         <p class="project-item__subtitle">Реализовано</p>
                         <ul class="project-item__list">
                             <li class="project-item__item"><span>замена всех фасадных ламп</span></li>
@@ -127,8 +157,10 @@
                     </a>
                     <a href="" class="projects-example__item project-item" data-aos="zoom-in">
                         <h3 class="project-item__title">Бизнес-отель<br>“Невский Центр”</h3>
-                        <div class="project-item__picture" style="background-image: url(/assets/img/project-item-8.jpg);"></div>
-                        <p class="project-item__descr">Здесь идет небольшое описание реализованного проекта в несколько строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
+                        <div class="project-item__picture"
+                            style="background-image: url(/assets/img/project-item-8.jpg);"></div>
+                        <p class="project-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
+                            строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
                         <p class="project-item__subtitle">Реализовано</p>
                         <ul class="project-item__list">
                             <li class="project-item__item"><span>замена всех фасадных ламп</span></li>
@@ -136,7 +168,16 @@
                         </ul>
                     </a>
                 </div>
-                <div class="projects-example__pagination"></div>
+                <div class="pagination projects-example__pagination">
+                    <p class="active">1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                    <p>...</p>
+                    <p>8</p>
+                    <p>Все</p>
+                </div>
             </div>
         </section>
     </main>

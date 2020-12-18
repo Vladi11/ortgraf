@@ -85,7 +85,7 @@ a {
     background: transparent;
     font-size: 14px;
     cursor: pointer;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     display: inline-flex;
     position: relative;
     overflow: hidden;
@@ -96,13 +96,13 @@ a {
     span {
         position: relative;
         z-index: 1;
-        transition: all 0.3s linear;
+        transition: all 0.2s linear;
         width: 100%;
         text-align: center;
     }
 
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         display: block;
         top: -75%;
@@ -199,23 +199,100 @@ a {
     }
 }
 
+.select {
+    position: relative;
+
+    select {
+        padding: 15px 44px 15px 24px;
+        background: transparent;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $black;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        border: 1px solid $grey;
+
+        option {
+            background-color: $red;
+            color: $white;
+        } 
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        background: transparent;
+        border: 1px solid $black;
+        transform: rotate(45deg);
+        border-top: none;
+        border-left: none;
+        pointer-events: none;
+        top: calc(50% - 12px/2);
+        right: 25px;
+    }
+}
+
+.pagination {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
+    grid-gap: 15px;
+    max-width: 545px;
+    margin: 0 auto;
+
+    p {
+        width: 55px;
+        height: 55px;
+        color: $white;
+        background: $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 18px;
+        font-family: "HelveticaNeueCyr", $main-font;
+        border: 1px solid $black;
+        transition: all 0.4s ease-in-out;
+        margin: 0 auto;
+
+        &:hover {
+            background-color: $white;
+            color: $red;
+            border-color: $red;
+        }
+
+        &.active,
+        &.active:hover {
+            background-color: $red;
+            border-color: $red;
+            color: $white;
+        }
+    }
+}
+
 .slider-arrows {
-    width: calc(100% + 64px*2*2);
+    width: calc(100% + 64px * 2 * 2);
     position: absolute;
-    top: calc(50% - 64px/2);
-    left: calc(-64px*2);
+    top: calc(50% - 64px / 2);
+    left: calc(-64px * 2);
     display: flex;
     justify-content: space-between;
     z-index: 1;
     height: 0;
     @include media-xxxl {
-        width: calc(100% + 36px*2*2);
-        left: calc(-36px*2);
+        width: calc(100% + 36px * 2 * 2);
+        left: calc(-36px * 2);
     }
     @include media-xxl {
         display: none;
     }
-    
+
     &__arrow {
         width: 64px;
         height: 64px;
@@ -229,7 +306,7 @@ a {
         transition: all 0.3s ease-in-out;
 
         &::after {
-            content: '';
+            content: "";
             display: block;
             width: 14px;
             height: 14px;
@@ -249,17 +326,17 @@ a {
 
         &_prew {
             &::after {
-               margin-right: -9px; 
-               border-top: none;
-               border-right: none;
+                margin-right: -9px;
+                border-top: none;
+                border-right: none;
             }
         }
 
         &_next {
             &::after {
-               margin-left: -9px; 
-               border-bottom: none;
-               border-left: none;
+                margin-left: -9px;
+                border-bottom: none;
+                border-left: none;
             }
         }
     }
@@ -270,15 +347,15 @@ a {
     align-items: center;
     justify-self: flex-start;
 
-    &-bullet{
+    &-bullet {
         background: $white;
         width: 6px;
         height: 6px;
-    
+
         &-active {
             background: $grey-dark;
         }
-    
+
         &:not(:last-child) {
             margin-right: 8px;
         }
@@ -300,7 +377,7 @@ a {
     }
 
     &_dark {
-        background: #BDBDBD;
+        background: #bdbdbd;
     }
 
     &-drag {
