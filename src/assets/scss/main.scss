@@ -87,6 +87,7 @@ a {
     cursor: pointer;
     transition: all 0.3s ease;
     display: inline-flex;
+    align-items: center;
     position: relative;
     overflow: hidden;
     transition: all 0.1s linear;
@@ -159,6 +160,25 @@ a {
 
             svg {
                 fill: $red !important;
+            }
+        }
+    }
+
+    &_black {
+        background: $black;
+        color: $white;
+        border-color: $black;
+
+        &::after {
+            background: $red;
+        }
+
+        &:hover {
+            color: $white;
+            border-color: $red;
+
+            svg {
+                fill: $white !important;
             }
         }
     }
