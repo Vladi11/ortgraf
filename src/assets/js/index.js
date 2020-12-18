@@ -126,6 +126,16 @@ $(document).ready(function () {
         },
     });
 
+    let sliderProjectsMaterials = new Swiper('.projects-materials__slider>.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        scrollbar: {
+            el: '.projects-materials__scrollbar',
+            hide: false,
+            draggable: true,
+        }
+    });
+
     $('.burger').on('click', function () {
         $('.main-menu').toggleClass('open');
         $(this).toggleClass('active');
