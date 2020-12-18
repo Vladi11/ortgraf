@@ -1,5 +1,5 @@
 .projects-details {
-    padding: 80px 0 60px;
+    padding: 80px 0;
 
     &__title {
         font-size: rem(48);
@@ -12,10 +12,11 @@
     &__row {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         flex-wrap: wrap;
     }
 
-    &__slider,
+    &__gallery,
     &__info {
         width: calc(50% - 15px);
         @include media-l {
@@ -29,6 +30,9 @@
         grid-gap: 35px 30px;
         @include media-l {
             grid-template-columns: repeat(2, 1fr);
+        }
+        @include media-m {
+            margin-top: 50px;
         }
         @media screen and (max-width: 750px) {
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -48,14 +52,14 @@
 
         &_red {
             background-color: $red;
-            background-image: url('/assets/img/projects-details-red.jpg');
+            background-image: url("/assets/img/projects-details-red.jpg");
         }
 
         &_black {
             background-color: $black;
-            background-image: url('/assets/img/projects-details-black.jpg');
+            background-image: url("/assets/img/projects-details-black.jpg");
         }
-        
+
         p {
             font-size: 14px;
             color: $white;
@@ -72,7 +76,7 @@
     }
 
     &__descr,
-    &__request{
+    &__request {
         grid-column: 1/-1;
     }
 
@@ -118,7 +122,7 @@
 }
 
 .projects-materials {
-    padding: 0 0 100px;
+    padding: 0;
 
     &__title {
         font-size: rem(36);
@@ -153,7 +157,120 @@
         width: auto;
         height: 7px;
         border-radius: 5px;
-        margin-top: -1px;
+        margin-top: 0;
+
+        &:hover {
+            height: 7px;
+            margin-top: 0;
+        }
+    }
+}
+
+.projects-gallery {
+    &__top {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        .swiper-slide {
+            width: 100%;
+            padding-bottom: 68.46%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__arrows {
+        width: calc(100% + 64px);
+        position: absolute;
+        top: calc(50% - 64px / 2);
+        left: calc(-64px / 2);
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+        height: 0;
+    }
+
+    &__prew,
+    &__next {
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $black;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 14px;
+            height: 14px;
+            border: 1px solid $white;
+            transform: rotate(45deg);
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+            background: $red;
+        }
+    }
+
+    &__prew {
+        &::after {
+            margin-right: -36px;
+            border-top: none;
+            border-right: none;
+        }
+    }
+
+    &__next {
+        &::after {
+            margin-left: -36px;
+            border-bottom: none;
+            border-left: none;
+        }
+    }
+
+    &__thumbs {
+        width: 100%;
+        margin-top: 45px;
+        padding: 18px 10px;
+        background: $grey-background-2;
+        position: relative;
+
+        .swiper-slide {
+            width: 150px;
+            height: 124px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            border: 2px solid transparent; 
+        }
+
+        .swiper-slide-thumb-active {
+            border-color: $red;    
+        }
+    }
+
+    .swiper-scrollbar {
+        display: flex !important;
+        margin: 0;
+        background: #eae8e7;
+        height: 5px;
+        border-radius: 5px;
+        top: 36px;
+    }
+
+    .swiper-scrollbar-drag {
+        width: auto;
+        height: 7px;
+        border-radius: 5px;
+        margin-top: 0;
 
         &:hover {
             height: 7px;
