@@ -161,6 +161,15 @@ $(document).ready(function () {
         }
     });
 
+    let sliderNewsMain = new Swiper('.news-main__slider>.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: '.news-main__slider>.swiper-pagination',
+            clickable: true
+        },
+    });
+
     $('.burger').on('click', function () {
         $('.main-menu').toggleClass('open');
         $(this).toggleClass('active');
