@@ -132,7 +132,7 @@
 }
 
 .footer-mobile {
-    @media screen and (min-width: calc(#{$breakpoint-l} + 1px)) {
+    @media screen and (min-width: $over-l-hide) {
         display: none;
     }
 
