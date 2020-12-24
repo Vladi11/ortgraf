@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
+    "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
     "svgxuse": "^1.2.6",
     "swiper": "4.3.5"

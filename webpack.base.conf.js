@@ -16,6 +16,7 @@ function generateHtmlPlugins(templateDir) {
       filename: `${name}.html`,
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
       inject: false,
+      minify: false
     })
   })
 }
@@ -44,11 +45,9 @@ module.exports = {
     rules: [{
       test: /\.html$/,
       include: path.resolve(__dirname, `${PATHS.src}/html/modules`),
-      use: {
-        loader: 'html-loader',
-        options: {
-          minimize: false
-        }
+      loader: 'html-loader',
+      options: {
+        minimize: false
       }
     }, {
       test: /\.js$/,
