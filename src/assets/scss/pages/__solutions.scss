@@ -1,0 +1,74 @@
+.solutions-list {
+    &__col {
+        margin-bottom: 50px;
+    }
+}
+
+.solutions-list-item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $grey;
+    height: 100%;
+
+    &__title {
+        font-size: 24px;
+        line-height: 130%;
+        color: $black;
+        margin-bottom: 30px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        .solutions-list-item__title {
+            color: $red;
+        }
+    }
+
+    &__picture {
+        margin-top: auto;
+        padding-bottom: 66%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            padding-bottom: 66%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+            background: rgba(255, 255, 255, 0.8);
+            z-index: 1;
+        }
+
+        &::after {
+            content: 'подробнее';
+            position: absolute;
+            color: $red;
+            font-size: 14px;
+            position: absolute;
+            top: calc(50% - 38px/2);
+            left: calc(50% - 102.67px/2);
+            transition: all .3s ease;
+            padding: 10px;
+            border: 1px solid $red;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            z-index: 2;
+        } 
+
+        &:hover {
+            &::after,
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}

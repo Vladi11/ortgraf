@@ -15,7 +15,7 @@
     <%= require('../modules/header.html') %>
 
     <main class="main">
-        <section class="section banner" style="background-image: url(/assets/img/main-banner.jpg);">
+        <section class="section banner banner_full-screen" style="background-image: url(/assets/img/main-banner.jpg);">
             <div class="wrapper">
                 <div class="banner__content">
                     <h1 class="banner__title">
@@ -35,7 +35,7 @@
         <section class="section solutions" style="background-image: url(/assets/img/solution-bg.jpg);">
             <div class="wrapper">
                 <div class="section__headline">
-                    <h2 class="title solutions__title">Решения</h2>
+                    <p class="title solutions__title">Решения</p>
                     <a href="" class="button solutions__button"><span>все решения</span></a>
                 </div>
                 <div class="solutions-slider">
@@ -131,7 +131,7 @@
         <section class="section lamps">
             <div class="wrapper">
                 <div class="section__headline lamps__headline">
-                    <h2 class="title">Каталог <span class="desktop">светильников</span></h2>
+                    <p class="title">Каталог <span class="desktop">светильников</span></p>
                     <a href="" class="button"><span>весь каталог</span></a>
                 </div>
                 <p class="lamps__descr">Широкий ассортимент светотехнического оборудования:</p>
@@ -264,7 +264,7 @@
             <div class="wrapper">
                 <div class="reviews__content">
                     <div class="section__headline section__headline_nearby section__headline_spaced">
-                        <h2 class="title title_white">Нам доверяют</h2>
+                        <p class="title title_white">Нам доверяют</p>
                         <a href="" class="button button_white desktop"><span>отзывы клиентов</span></a>
                     </div>
                     <div class="reviews-slider">
@@ -325,7 +325,7 @@
         <section class="section projects">
             <div class="wrapper">
                 <div class="section__headline section__headline_spaced">
-                    <h2 class="title">Реализованные проекты</h2>
+                    <p class="title">Реализованные проекты</p>
                     <a href="/projects.html" class="button desktop"><span>все проекты</span></a>
                 </div>
                 <div class="projects-slider">
@@ -364,63 +364,87 @@
         <section class="section company">
             <div class="wrapper">
                 <div class="section__headline">
-                    <h2 class="title title_white">Компания ОРТГРАФ</h2>
+                    <p class="title title_white">Компания ОРТГРАФ</p>
                 </div>
                 <p class="company__descr">С 1997 года занимаемся поставками материалов для интерьеров. Эксклюзивный
                     представитель более 15 европейских брендов в РФ. Вот некоторые из наших проектов:</p>
-                <div class="company__row desktop">
-                    <div class="company-desert">
-                        <svg>
-                            <use xlink:href="/assets/img/sprite.svg#case"></use>
-                        </svg>
-                        <div class="company-desert__text">
-                            <p class="company-desert__title">5000 +</p>
-                            <p class="company-desert__descr">реализованных<br>проектов</p>
+                <div class="container-fluid company__row desktop">
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+                            <div class="company-desert">
+                                <svg>
+                                    <use xlink:href="/assets/img/sprite.svg#case"></use>
+                                </svg>
+                                <div class="company-desert__text">
+                                    <p class="company-desert__title">5000 +</p>
+                                    <p class="company-desert__descr">реализованных<br>проектов</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="company-desert">
-                        <svg>
-                            <use xlink:href="/assets/img/sprite.svg#hands"></use>
-                        </svg>
-                        <div class="company-desert__text">
-                            <p class="company-desert__title">21 год</p>
-                            <p class="company-desert__descr">опыт компании<br>с 1997 г</p>
+                        <div class="col-auto">
+                            <div class="company-desert">
+                                <svg>
+                                    <use xlink:href="/assets/img/sprite.svg#hands"></use>
+                                </svg>
+                                <div class="company-desert__text">
+                                    <p class="company-desert__title">21 год</p>
+                                    <p class="company-desert__descr">опыт компании<br>с 1997 г</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="company-desert">
-                        <svg>
-                            <use xlink:href="/assets/img/sprite.svg#box"></use>
-                        </svg>
-                        <div class="company-desert__text">
-                            <p class="company-desert__title">Подберем решение</p>
-                            <p class="company-desert__descr">под ваши<br>задачи</p>
+                        <div class="col-auto">
+                            <div class="company-desert">
+                                <svg>
+                                    <use xlink:href="/assets/img/sprite.svg#box"></use>
+                                </svg>
+                                <div class="company-desert__text">
+                                    <p class="company-desert__title">Подберем решение</p>
+                                    <p class="company-desert__descr">под ваши<br>задачи</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="company__row company__row_center">
-                    <button class="button button_red button_icon desktop">
-                        <svg>
-                            <use xlink:href="/assets/img/sprite.svg#calc"></use>
-                        </svg>
-                        <span>Рассчитать проект<span>
-                    </button>
-                    <div class="company__log">
-                        <img src="/assets/img/logo-hilton.png" alt="Логитп hilton">
-                    </div>
-                    <div class="company__log">
-                        <img src="/assets/img/logo-radission.png" alt="Логитп radission">
-                    </div>
-                    <div class="company__log">
-                        <img src="/assets/img/logo-marriot.png" alt="Логитп marriot">
-                    </div>
-                    <div class="company__log">
-                        <img src="/assets/img/logo-novotel.png" alt="Логитп novotel">
-                    </div>
-                    <div class="company__log">
-                        <img src="/assets/img/logo-ibis.png" alt="Логитп ibis">
-                    </div>
-                    <div class="company__log">
-                        <img src="/assets/img/logo-holiday.png" alt="Логитп holiday">
+                <div class="container-fluid company__row">
+                    <div class="row justify-content-between">
+                        <div class="col-auto align-self-center desktop">
+                           <button class="button button_red button_icon">
+                                <svg>
+                                    <use xlink:href="/assets/img/sprite.svg#calc"></use>
+                                </svg>
+                                <span>Рассчитать проект<span>
+                            </button> 
+                        </div>
+                        <div class="col-auto align-self-center">
+                            <div class="company__log">
+                                <img src="/assets/img/logo-hilton.png" alt="Логитп hilton">
+                            </div>
+                        </div>
+                        <div class="col-auto align-self-center">
+                            <div class="company__log">
+                                <img src="/assets/img/logo-radission.png" alt="Логитп radission">
+                            </div>
+                        </div>
+                        <div class="col-auto align-self-center">
+                            <div class="company__log">
+                                <img src="/assets/img/logo-marriot.png" alt="Логитп marriot">
+                            </div>
+                        </div>
+                        <div class="col-auto align-self-center">
+                            <div class="company__log">
+                                <img src="/assets/img/logo-novotel.png" alt="Логитп novotel">
+                            </div>
+                        </div>
+                        <div class="col-auto align-self-center">
+                            <div class="company__log">
+                                <img src="/assets/img/logo-ibis.png" alt="Логитп ibis">
+                            </div>
+                        </div>
+                        <div class="col-auto align-self-center">
+                            <div class="company__log">
+                                <img src="/assets/img/logo-holiday.png" alt="Логитп holiday">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -485,7 +509,7 @@
         <section class="section news">
             <div class="wrapper">
                 <div class="section__headline section__headline_spaced">
-                    <h2 class="title">Новости</h2>
+                    <p class="title">Новости</p>
                     <a href="/news.html" class="button desktop"><span>смотреть все</span></a>
                 </div>
                 <div class="news__row">
@@ -533,8 +557,6 @@
     </main>
     
     <%= require('../modules/footer.html') %>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <% for (key in htmlWebpackPlugin.files.js) { %>
     <script src="<%= htmlWebpackPlugin.files.js[key] %>" type="text/javascript"></script><% } %>
 </body>

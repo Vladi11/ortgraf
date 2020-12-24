@@ -1,6 +1,3 @@
-import Swiper from 'swiper/bundle';
-import AOS from 'aos';
-
 $(document).ready(function () {
 
     AOS.init({
@@ -22,24 +19,24 @@ $(document).ready(function () {
     });
 
     let sliderSolution = new Swiper('.solutions-slider>.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 8,
+        slidesPerView: 4,
+        spaceBetween: 30,
+        breakpoints: {
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 8,
+            }
+        },
         navigation: {
             nextEl: '.solutions-slider__next',
             prevEl: '.solutions-slider__prev',
         },
         autoplay: {
             delay: 5000,
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-            },
-            1200: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-            }
         },
         scrollbar: {
             el: '.solutions-slider__scrollbar',
@@ -49,40 +46,48 @@ $(document).ready(function () {
     });
 
     let sliderLamps = new Swiper('.lamps-slider>.swiper-container', {
-        slidesPerView: 2,
+        slidesPerView: 6,
         spaceBetween: 8,
+        breakpoints: {
+            992: {
+                slidesPerView: 4,
+            },
+            768: {
+                slidesPerView: 2,
+            }
+        },
         navigation: {
             nextEl: '.lamps-slider__next',
             prevEl: '.lamps-slider__prev',
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 4,
-            },
-            992: {
-                slidesPerView: 6,
-            }
-        },
+        }
     });
 
     let sliderReviews = new Swiper('.reviews-slider>.swiper-container', {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 9,
+        breakpoints: {
+            650: {
+                slidesPerView: 2,
+            }
+        },
         scrollbar: {
             el: '.reviews-slider__scrollbar',
             hide: false,
             draggable: true
-        },
-        breakpoints: {
-            650: {
-                slidesPerView: 3,
-            }
         }
     });
 
     let sliderProjects = new Swiper('.projects-slider>.swiper-container', {
-        slidesPerView: 1,
+        slidesPerView: 4,
         spaceBetween: 30,
+        breakpoints: {
+            992: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 1,
+            }
+        },
         navigation: {
             nextEl: '.projects-slider__next',
             prevEl: '.projects-slider__prev',
@@ -91,14 +96,6 @@ $(document).ready(function () {
             el: '.projects-slider__scrollbar',
             hide: false,
             draggable: true
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 3,
-            },
-            992: {
-                slidesPerView: 4,
-            }
         }
     });
 

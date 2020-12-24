@@ -16,6 +16,7 @@ function generateHtmlPlugins(templateDir) {
       filename: `${name}.html`,
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
       inject: false,
+      minify: false
     })
   })
 }
@@ -36,31 +37,17 @@ module.exports = {
     app: PATHS.src
   },
   output: {
-    filename: `${PATHS.assets}js/[name].[contenthash].js`,
+    filename: `${PATHS.assets}js/scripts.js?v=[contenthash]`,
     path: PATHS.build,
     publicPath: '/'
-  },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          name: 'vendors',
-          test: /node_modules/,
-          chunks: 'all',
-          enforce: true
-        }
-      }
-    }
   },
   module: {
     rules: [{
       test: /\.html$/,
       include: path.resolve(__dirname, `${PATHS.src}/html/modules`),
-      use: {
-        loader: 'html-loader',
-        options: {
-          minimize: false
-        }
+      loader: 'html-loader',
+      options: {
+        minimize: false
       }
     }, {
       test: /\.js$/,
@@ -111,7 +98,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[hash].css`,
+      filename: `${PATHS.assets}css/styles.css?v=[hash]`,
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/assets/img`, to: `${PATHS.assets}img` },
@@ -121,5 +108,10 @@ module.exports = {
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: [path.resolve(process.cwd(), `${PATHS.build}`)]
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery/dist/jquery.min.js',
+      Swiper: 'swiper/dist/js/swiper.min.js',
+      AOS: 'aos'
+    })
   ].concat(htmlPlugins),
 }
