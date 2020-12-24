@@ -15,7 +15,7 @@
     <%= require('../modules/header.html') %>
 
     <main class="main">
-        <section class="section banner" style="background-image: url(/assets/img/main-banner.jpg);">
+        <section class="section banner banner_full-screen" style="background-image: url(/assets/img/main-banner.jpg);">
             <div class="wrapper">
                 <div class="banner__content">
                     <h1 class="banner__title">
@@ -368,59 +368,83 @@
                 </div>
                 <p class="company__descr">С 1997 года занимаемся поставками материалов для интерьеров. Эксклюзивный
                     представитель более 15 европейских брендов в РФ. Вот некоторые из наших проектов:</p>
-                <div class="company__row desktop">
-                    <div class="company-desert">
-                        <svg>
-                            <use xlink:href="/assets/img/sprite.svg#case"></use>
-                        </svg>
-                        <div class="company-desert__text">
-                            <p class="company-desert__title">5000 +</p>
-                            <p class="company-desert__descr">реализованных<br>проектов</p>
+                <div class="container-fluid company__row desktop">
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+                            <div class="company-desert">
+                                <svg>
+                                    <use xlink:href="/assets/img/sprite.svg#case"></use>
+                                </svg>
+                                <div class="company-desert__text">
+                                    <p class="company-desert__title">5000 +</p>
+                                    <p class="company-desert__descr">реализованных<br>проектов</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="company-desert">
-                        <svg>
-                            <use xlink:href="/assets/img/sprite.svg#hands"></use>
-                        </svg>
-                        <div class="company-desert__text">
-                            <p class="company-desert__title">21 год</p>
-                            <p class="company-desert__descr">опыт компании<br>с 1997 г</p>
+                        <div class="col-auto">
+                            <div class="company-desert">
+                                <svg>
+                                    <use xlink:href="/assets/img/sprite.svg#hands"></use>
+                                </svg>
+                                <div class="company-desert__text">
+                                    <p class="company-desert__title">21 год</p>
+                                    <p class="company-desert__descr">опыт компании<br>с 1997 г</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="company-desert">
-                        <svg>
-                            <use xlink:href="/assets/img/sprite.svg#box"></use>
-                        </svg>
-                        <div class="company-desert__text">
-                            <p class="company-desert__title">Подберем решение</p>
-                            <p class="company-desert__descr">под ваши<br>задачи</p>
+                        <div class="col-auto">
+                            <div class="company-desert">
+                                <svg>
+                                    <use xlink:href="/assets/img/sprite.svg#box"></use>
+                                </svg>
+                                <div class="company-desert__text">
+                                    <p class="company-desert__title">Подберем решение</p>
+                                    <p class="company-desert__descr">под ваши<br>задачи</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="company__row company__row_center">
-                    <button class="button button_red button_icon desktop">
-                        <svg>
-                            <use xlink:href="/assets/img/sprite.svg#calc"></use>
-                        </svg>
-                        <span>Рассчитать проект<span>
-                    </button>
-                    <div class="company__log">
-                        <img src="/assets/img/logo-hilton.png" alt="Логитп hilton">
-                    </div>
-                    <div class="company__log">
-                        <img src="/assets/img/logo-radission.png" alt="Логитп radission">
-                    </div>
-                    <div class="company__log">
-                        <img src="/assets/img/logo-marriot.png" alt="Логитп marriot">
-                    </div>
-                    <div class="company__log">
-                        <img src="/assets/img/logo-novotel.png" alt="Логитп novotel">
-                    </div>
-                    <div class="company__log">
-                        <img src="/assets/img/logo-ibis.png" alt="Логитп ibis">
-                    </div>
-                    <div class="company__log">
-                        <img src="/assets/img/logo-holiday.png" alt="Логитп holiday">
+                <div class="container-fluid company__row">
+                    <div class="row justify-content-between">
+                        <div class="col-auto align-self-center desktop">
+                           <button class="button button_red button_icon">
+                                <svg>
+                                    <use xlink:href="/assets/img/sprite.svg#calc"></use>
+                                </svg>
+                                <span>Рассчитать проект<span>
+                            </button> 
+                        </div>
+                        <div class="col-auto align-self-center">
+                            <div class="company__log">
+                                <img src="/assets/img/logo-hilton.png" alt="Логитп hilton">
+                            </div>
+                        </div>
+                        <div class="col-auto align-self-center">
+                            <div class="company__log">
+                                <img src="/assets/img/logo-radission.png" alt="Логитп radission">
+                            </div>
+                        </div>
+                        <div class="col-auto align-self-center">
+                            <div class="company__log">
+                                <img src="/assets/img/logo-marriot.png" alt="Логитп marriot">
+                            </div>
+                        </div>
+                        <div class="col-auto align-self-center">
+                            <div class="company__log">
+                                <img src="/assets/img/logo-novotel.png" alt="Логитп novotel">
+                            </div>
+                        </div>
+                        <div class="col-auto align-self-center">
+                            <div class="company__log">
+                                <img src="/assets/img/logo-ibis.png" alt="Логитп ibis">
+                            </div>
+                        </div>
+                        <div class="col-auto align-self-center">
+                            <div class="company__log">
+                                <img src="/assets/img/logo-holiday.png" alt="Логитп holiday">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

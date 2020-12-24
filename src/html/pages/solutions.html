@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ОРТГРАФ СВЕТ - Решения</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <% for (key in htmlWebpackPlugin.files.css) { %>
+    <link href="<%= htmlWebpackPlugin.files.css[key] %>" rel="stylesheet" /><% } %>
+</head>
+
+<body>
+    <%= require('../modules/header.html') %>
+
+    <main class="main">
+        <section class="section banner" style="background-image: url(/assets/img/solutions-banner.jpg);">
+            <div class="wrapper">
+                <div class="banner__content">
+                    <h1 class="banner__title">
+                        <span class="banner__title_red">Решения</span>
+                    </h1>
+                    <p class="banner__descr">Разработка и внедрение профессиональных
+                        систем освещения</p>
+                    <button class="button button_red banner__button"><span>Получить консультацию</span></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section items-list-filters">
+            <div class="wrapper">
+                <div class="items-list-filters__options">
+                    <div class="row justify-content-between align-items-center desktop">
+                        <div class="col-auto">
+                            <div class="items-list-filters__buttons">
+                                <button class="button items-list-filters__button"><span>Магазины</span></button>
+                                <button class="button items-list-filters__button"><span>Офисы</span></button>
+                                <button class="button items-list-filters__button"><span>Промышленное</span></button>
+                                <button class="button items-list-filters__button"><span>Рестораны и кафе</span></button>
+                                <button class="button items-list-filters__button"><span>Уличное освещение</span></button>
+                                <button class="button items-list-filters__button"><span>Складское освещение</span></button>
+                                <button class="button items-list-filters__button"><span>Спортивное освещение</span></button>
+                                <button class="button items-list-filters__button"><span>Для музеев и выставок</span></button>
+                                <button class="button items-list-filters__button"><span>Спортивное освещение</span></button>
+                                <button class="button items-list-filters__button"><span>Административное освещение</span></button>
+                                <button class="button items-list-filters__button"><span>Для частных домов</span></button>
+                                <button class="button items-list-filters__button"><span>Архитектурное</span></button>
+                                <button class="button items-list-filters__button"><span>Интеллектуальное освещение</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mobile">
+                        <div class="col-12">
+                            <div class="select items-list-filters__select">
+                                <select name="projects-select" id="projects-select">
+                                    <option value="Все категории" selected>Все категории</option>
+                                    <option value="Магазины">Магазины</option>
+                                    <option value="Офисы">Офисы</option>
+                                    <option value="Промышленное">Промышленное</option>
+                                    <option value="Рестораны и кафе">Рестораны и кафе</option>
+                                    <option value="Уличное освещение">Уличное освещение</option>
+                                    <option value="Складское освещение">Складское освещение</option>
+                                    <option value="Спортивное освещение">Спортивное освещение</option>
+                                    <option value="Для музеев и выставок">Для музеев и выставок</option>
+                                    <option value="Спортивное освещение">Спортивное освещение</option>
+                                    <option value="Административное освещение">Административное освещение</option>
+                                    <option value="Для частных домов">Для частных домов</option>
+                                    <option value="Архитектурное">Архитектурное</option>
+                                    <option value="Интеллектуальное освещение">Интеллектуальное освещение</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <section class="section solutions-list">
+            <div class="wrapper">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6 solutions-list__col">
+                        <a href="" class="solutions-list-item">
+                            <p class="solutions-list-item__title">Продуктовые магазины</p>
+                            <div class="solutions-list-item__picture" style="background-image: url(/assets/img/solutions/solutions-1.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 solutions-list__col">
+                        <a href="" class="solutions-list-item">
+                            <p class="solutions-list-item__title">Магазины одежды</p>
+                            <div class="solutions-list-item__picture" style="background-image: url(/assets/img/solutions/solutions-2.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 solutions-list__col">
+                        <a href="" class="solutions-list-item">
+                            <p class="solutions-list-item__title">Освещение автосалонов</p>
+                            <div class="solutions-list-item__picture" style="background-image: url(/assets/img/solutions/solutions-3.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 solutions-list__col">
+                        <a href="" class="solutions-list-item">
+                            <p class="solutions-list-item__title">Освещение торговых павильонов и бутиков</p>
+                            <div class="solutions-list-item__picture" style="background-image: url(/assets/img/solutions/solutions-4.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 solutions-list__col">
+                        <a href="" class="solutions-list-item">
+                            <p class="solutions-list-item__title">Продуктовые магазины</p>
+                            <div class="solutions-list-item__picture" style="background-image: url(/assets/img/solutions/solutions-5.jpg);"></div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 solutions-list__col">
+                        <a href="" class="solutions-list-item">
+                            <p class="solutions-list-item__title">Магазины одежды</p>
+                            <div class="solutions-list-item__picture" style="background-image: url(/assets/img/solutions/solutions-6.jpg);"></div>
+                        </a>
+                    </div>
+                </div>
+                <%= require('../modules/pagination.html') %>
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <button class="button button_no-transform"><span>Показать ещё</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%= require('../modules/footer.html') %>
+    <% for (key in htmlWebpackPlugin.files.js) { %>
+    <script src="<%= htmlWebpackPlugin.files.js[key] %>" type="text/javascript"></script><% } %>
+</body>
+
+</html>
