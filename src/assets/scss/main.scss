@@ -513,7 +513,7 @@ a {
 @import "__footer";
 
 .mobile {
-    @media screen and (min-width: calc(#{$breakpoint-m} + 1px)) {
+    @media screen and (min-width: $over-m-hide) {
         display: none;
     }
 }

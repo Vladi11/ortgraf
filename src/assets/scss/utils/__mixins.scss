@@ -12,43 +12,71 @@
 
 // Breakpoints media request
 @mixin media-xs {
-	@media (max-width: $breakpoint-xs) {
+	@media screen and (max-width: $breakpoint-xs) {
 		@content;
+
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			@content;
+		}
 	}
 }
 
 @mixin media-s {
-	@media (max-width: $breakpoint-s) {
+	@media screen and (max-width: $breakpoint-s) {
 		@content;
+
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			@content;
+		}
 	}
 }
 
 @mixin media-m {
-	@media (max-width: $breakpoint-m) {
+	@media screen and (max-width: $breakpoint-m) {
 		@content;
+
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			@content;
+		}
 	}
 }
 
 @mixin media-l {
-	@media (max-width: $breakpoint-l) {
+	@media screen and (max-width: $breakpoint-l) {
 		@content;
+
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			@content;
+		}
 	}
 }
 
 @mixin media-xl {
-	@media (max-width: $breakpoint-xl) {
+	@media screen and (max-width: $breakpoint-xl) {
 		@content;
+
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			@content;
+		}
 	}
 }
 
 @mixin media-xxl {
-	@media (max-width: $breakpoint-xxl) {
+	@media screen and (max-width: $breakpoint-xxl) {
 		@content;
+
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			@content;
+		}
 	}
 }
 
 @mixin media-xxxl {
-	@media (max-width: $breakpoint-xxxl) {
+	@media screen and (max-width: $breakpoint-xxxl) {
 		@content;
+
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			@content;
+		}
 	}
 }
