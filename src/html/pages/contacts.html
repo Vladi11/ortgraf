@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ОРТГРАФ СВЕТ - Реализованные проекты</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <% for (key in htmlWebpackPlugin.files.css) { %>
+    <link href="<%= htmlWebpackPlugin.files.css[key] %>" rel="stylesheet" /><% } %>
+</head>
+
+<body>
+    <%= require('../modules/header.html') %>
+
+    <main class="main">
+        <section class="section banner" style="background-image: url(/assets/img/contacts-banner.jpg);">
+            <div class="wrapper">
+                <div class="banner__content">
+                    <h1 class="banner__title">
+                        <span class="banner__title_red">КОНТАКТЫ</span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+        <section class="section contacts-main">
+            <div class="wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-3">
+                            <ul class="contacts-main__list">
+                                <li class="contacts-main__item"><span data-toglle="city" data-city="city-1" class="contacts-main__toggle active">Офисы в Москве</span></li>
+                                <li class="contacts-main__item"><span data-toglle="city" data-city="city-2" class="contacts-main__toggle">Офис в Санкт-Петербурге</span></li>
+                                <li class="contacts-main__item"><span data-toglle="city" data-city="city-3" class="contacts-main__toggle">Офис в Краснодаре</span></li>
+                                <li class="contacts-main__item"><span data-toglle="city" data-city="city-4" class="contacts-main__toggle">Офис в Ростове-на-Дону</span></li>
+                                <li class="contacts-main__item"><span data-toglle="city" data-city="city-5" class="contacts-main__toggle">Представитель в Казани</span></li>
+                                <li class="contacts-main__item"><span data-toglle="city" data-city="city-6" class="contacts-main__toggle">Партнёр в Астане</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-9">
+                            <div class="contacts-main__citys-list">
+                                <div id="city-1" class="contacts-main__city active">
+                                    <p class="contacts-main__title">ОФИСЫ В МОСКВЕ</p>
+                                    <div class="contacts-main__slider">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination contacts-main__pagination"></div>
+                                        <div class="slider-arrows">
+                                            <div class="slider-arrows__arrow slider-arrows__arrow_prew contacts-main__prev"></div>
+                                            <div class="slider-arrows__arrow slider-arrows__arrow_next contacts-main__next"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+                                            <p class="contacts-main__subtitle">Центральный офис:</p>
+                                            <p class="contacts-main__text">
+                                                Адрес: 107113, Москва, ул. Шумкина, д. 20, стр. 1<br>
+                                                Телефон: +7 (495) 221-0038<br>
+                                                Факс: +7 (495) 221-0038<br>
+                                                E-mail: <a href="mailto:ortgraph@ortgraph.ru">ortgraph@ortgraph.ru</a>
+                                            </p>
+                                            <p class="contacts-main__text">
+                                                Время работы:<br>
+                                                Пн-Пт: 10.00 - 18.00
+                                            </p>
+                                            <p class="contacts-main__text">
+                                                <span class="print">Печать карты проезда</span>
+                                            </p>
+                                            <p class="contacts-main__text">
+                                                <span>Как пройти/проехать</span>
+                                            </p>
+                                            <div class="contacts-main__text">
+                                                <span class="more" data-toglle="requisites">Наши реквизиты</span>
+                                                <p class="more-text">
+                                                    ООО "Ортграф Контракт" г. Москва<br>
+                                                    ИНН: 7728373473<br>
+                                                    КПП: 772801001<br>
+                                                    ОГРН: 1177746610282<br>
+                                                    Банк: ООО МИБ "ДАЛЕНА" г. Москва<br>
+                                                    р/с: 40702810600000002049<br>
+                                                    к/с: 30101810845250000371<br>
+                                                    БИК: 044525371<br>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <p class="contacts-main__subtitle">Шоу-рум</p>
+                                            <p class="contacts-main__text">
+                                                Адрес: 105120, Москва, ул. Нижняя Сыромятническая, д. 10, стр. 3, 3 этаж, showroom 89. ОПЛАТА ПАРКОВКИ ЗА&nbsp;НАШ&nbsp;СЧЁТ!<br>
+                                                Телефон: +7 (925) 196-0571<br>
+                                                E-mail: artplay@ortgraph.ru<br>
+                                            </p>
+                                            <p class="contacts-main__text">
+                                                Время работы:
+                                                Ежедневно: 10.00 - 20.00
+                                            </p>
+                                            <p class="contacts-main__text">
+                                                <span class="print">Печать карты проезда</span>
+                                            </p>
+                                            <p class="contacts-main__text">
+                                                <span>Как пройти/проехать</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="city-2" class="contacts-main__city">
+                                    <p class="contacts-main__title">ОФИС В САНКТ-ПЕТЕРБУРГЕ</p>
+                                    <div class="contacts-main__slider">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination contacts-main__pagination"></div>
+                                        <div class="slider-arrows">
+                                            <div class="slider-arrows__arrow slider-arrows__arrow_prew contacts-main__prev"></div>
+                                            <div class="slider-arrows__arrow slider-arrows__arrow_next contacts-main__next"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+                                            <p class="contacts-main__subtitle">Центральный офис:</p>
+                                            <p class="contacts-main__text">
+                                                Адрес: 190121, Санкт-Петербург, Английский пр., д. 33, офис 30<br>
+                                                Телефон: +7 (812) 334-3640<br>
+                                                Факс: +7 (812) 713-7253<br>
+                                                E-mail: <a href="mailto:spb@ortgraph.ru">spb@ortgraph.ru</a>
+                                            </p>
+                                            <p class="contacts-main__text">
+                                                <span class="print">Печать карты проезда</span>
+                                            </p>
+                                            <p class="contacts-main__text">
+                                                <span>Как пройти/проехать</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="city-3" class="contacts-main__city">
+                                    <p class="contacts-main__title">ОФИС В КРАСНОДАРЕ</p>
+                                    <div class="contacts-main__slider">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination contacts-main__pagination"></div>
+                                        <div class="slider-arrows">
+                                            <div class="slider-arrows__arrow slider-arrows__arrow_prew contacts-main__prev"></div>
+                                            <div class="slider-arrows__arrow slider-arrows__arrow_next contacts-main__next"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+                                            <p class="contacts-main__subtitle">Центральный офис:</p>
+                                            <p class="contacts-main__text">
+                                                Адрес: 350042, Краснодар, ул. 40 лет Победы, д. 20/1, 4 этаж, офис 413<br>
+                                                Телефон: +7 (861) 212-6793, +7 (909) 447-2056<br>
+                                                E-mail: <a href="mailto:krasnodar@ortgraph.ru">krasnodar@ortgraph.ru</a>
+                                            </p>
+                                            <p class="contacts-main__text">
+                                                <span class="print">Печать карты проезда</span>
+                                            </p>
+                                            <p class="contacts-main__text">
+                                                <span>Как пройти/проехать</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="city-4" class="contacts-main__city">
+                                    <p class="contacts-main__title">ОФИС В РОСТОВЕ-НА-ДОНУ</p>
+                                    <div class="contacts-main__slider">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination contacts-main__pagination"></div>
+                                        <div class="slider-arrows">
+                                            <div class="slider-arrows__arrow slider-arrows__arrow_prew contacts-main__prev"></div>
+                                            <div class="slider-arrows__arrow slider-arrows__arrow_next contacts-main__next"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+                                            <p class="contacts-main__subtitle">Центральный офис:</p>
+                                            <p class="contacts-main__text">
+                                                Адрес: 344038, Ростов-на-Дону, ул. Нансена, д. 239, ТЦ «Декорум», офис 303<br>
+                                                Телефон: +7 (863) 218-5612, +7 (988) 945-7368<br>
+                                                E-mail: <a href="mailto:krasnodar@ortgraph.ru">krasnodar@ortgraph.ru</a>
+                                            </p>
+                                            <p class="contacts-main__text">
+                                                <span class="print">Печать карты проезда</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="city-5" class="contacts-main__city">
+                                    <p class="contacts-main__title">ПРЕДСТАВИТЕЛЬ В КАЗАНИ</p>
+                                    <div class="contacts-main__slider">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination contacts-main__pagination"></div>
+                                        <div class="slider-arrows">
+                                            <div class="slider-arrows__arrow slider-arrows__arrow_prew contacts-main__prev"></div>
+                                            <div class="slider-arrows__arrow slider-arrows__arrow_next contacts-main__next"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+                                            <p class="contacts-main__subtitle">Центральный офис:</p>
+                                            <p class="contacts-main__text">
+                                                Адрес: 420066, Казань, проспект Ямашева, д. 33, офис 515, 5 этаж<br>
+                                                Телефон: +7 (904) 766-0537, +7 (495) 221-0038 доб. 150<br>
+                                                E-mail: <a href="mailto:zaripov-ortgraph@mail.ru">zaripov-ortgraph@mail.ru</a>
+                                            </p>
+                                            <p class="contacts-main__text">
+                                                Время работы:<br>
+                                                Пн-Пт: 10.00 - 18.00
+                                            </p>
+                                            <p class="contacts-main__text">
+                                                <span class="print">Печать карты проезда</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="city-6" class="contacts-main__city">
+                                    <p class="contacts-main__title">ПРЕДСТАВИТЕЛЬ В КАЗАНИ</p>
+                                    <div class="contacts-main__slider">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                                <div class="swiper-slide contacts-main__slide" style="background-image: url(/assets/img/contacts/moscow.jpg);"></div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination contacts-main__pagination"></div>
+                                        <div class="slider-arrows">
+                                            <div class="slider-arrows__arrow slider-arrows__arrow_prew contacts-main__prev"></div>
+                                            <div class="slider-arrows__arrow slider-arrows__arrow_next contacts-main__next"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+                                            <p class="contacts-main__subtitle">Центральный офис:</p>
+                                            <p class="contacts-main__text">
+                                                Адрес: 010000, Нур-Султан (Астана), Республика Казахстан, ул. Жансугирова, д. 8/2, офис 305<br>
+                                                Телефон: +7 (7172) 41-8034, 41-8032, +7 (701) 360-8792<br>
+                                                E-mail: <a href="mailto:kz@ortgraph.ru">kz@ortgraph.ru</a>
+                                            </p>
+                                            <p class="contacts-main__text">
+                                                <span class="print">Печать карты проезда</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%= require('../modules/footer.html') %>
+    <% for (key in htmlWebpackPlugin.files.js) { %>
+    <script src="<%= htmlWebpackPlugin.files.js[key] %>" type="text/javascript"></script><% } %>
+</body>
+
+</html>

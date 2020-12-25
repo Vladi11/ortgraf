@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ОРТГРАФ СВЕТ - Освещение магазинов одежды</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <% for (key in htmlWebpackPlugin.files.css) { %>
+    <link href="<%= htmlWebpackPlugin.files.css[key] %>" rel="stylesheet" /><% } %>
+</head>
+
+<body>
+    <%= require('../modules/header.html') %>
+
+    <main class="main">
+        <section class="section banner banner_full-screen" style="background-image: url(/assets/img/solutions-details-banner.jpg);">
+            <div class="wrapper">
+                <div class="banner__content">
+                    <h1 class="banner__title">
+                        <span class="banner__title_red desktop">ОСВЕЩЕНИЕ МАГАЗИНОВ ОДЕЖДЫ</span>
+                        <span class="banner__title_red mobile">ОСВЕЩЕНИЕ</span>
+                        <span class="banner__title_red mobile">МАГАЗИНОВ</span>
+                        <span class="banner__title_red mobile">ОДЕЖДЫ</span>
+                    </h1>
+                    <p class="banner__descr">Разработка концепций, светотехническое проектирование, поставка и монтаж
+                        оборудования, сервисное обслуживание</p>
+                    <button class="button button_red banner__button"><span>Получить консультацию</span></button>
+                </div>
+            </div>
+        </section>
+        <section class="section solution-main">
+            <div class="wrapper">
+                <div class="wrapper wrapper_small">
+                    <p class="news-main__text">
+                        Samsung SDS и мировой лидер в области умного уличного освещения Telensa объединились, чтобы при помощи уличного освещения сделать города умными. Рассказываем, как это будет происходить и какие результаты ожидаются.
+                        <br><br>
+                        В общем смысле умный город — это город, в котором все информационные системы находятся под единым управлением. Задача информационных систем — собирать данные с каждого района и отправлять их в центр управления. Задача центра управления — собирать, хранить и обрабатывать данные, чтобы их можно было проанализировать и принять стратегические и локальные решения. И все это должно происходить автоматически в режиме реального времени. 
+                        <br><br>
+                        Уличное освещение считается самым оптимальным средством для создания умного города. Уличные фонари можно поставить на каждой улице и снабдить их нужными датчиками для сбора городских данных.  
+                        <br><br>
+                    </p>
+                </div>
+                <div class="solution-main-slider">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide solution-main-slider__slide" style="background-image: url(/assets/img/solutions/solution-main-slides/slide-1.jpg);"></div>
+                            <div class="swiper-slide solution-main-slider__slide" style="background-image: url(/assets/img/solutions/solution-main-slides/slide-1.jpg);"></div>
+                            <div class="swiper-slide solution-main-slider__slide" style="background-image: url(/assets/img/solutions/solution-main-slides/slide-1.jpg);"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination solution-main-slider__pagination"></div>
+                    <div class="slider-arrows">
+                        <div class="slider-arrows__arrow slider-arrows__arrow_prew solution-main-slider__prev"></div>
+                        <div class="slider-arrows__arrow slider-arrows__arrow_next solution-main-slider__next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section items-list">
+            <div class="wrapper">
+                <p class="page-title items-list__subtitle">Популярное освещение<br>магазинов одежды</p>
+                <div class="row justify-content-center items-list__grid">
+                    <div class="col-auto">
+                        <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
+                            <div class="items-list-item__picture"
+                                style="background-image: url(/assets/img/projects/project-item-1.jpg);"></div>
+                            <p class="items-list-item__descr">Декоративный светодиодный светильник Maytoni Elem DL052</p>
+                            <ul class="items-list-item__list">
+                                <li class="items-list-item__item"><span>Тип: Встраиваемый</span></li>
+                                <li class="items-list-item__item"><span>Тип: Встраиваемый</span></li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
+                            <div class="items-list-item__picture"
+                                style="background-image: url(/assets/img/projects/project-item-2.jpg);"></div>
+                            <p class="items-list-item__descr">Декоративный светодиодный светильник Maytoni Elem DL052</p>
+                            <ul class="items-list-item__list">
+                                <li class="items-list-item__item"><span>Тип: Встраиваемый</span></li>
+                                <li class="items-list-item__item"><span>Тип: Встраиваемый</span></li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
+                            <div class="items-list-item__picture"
+                                style="background-image: url(/assets/img/projects/project-item-3.jpg);"></div>
+                            <p class="items-list-item__descr">Декоративный светодиодный светильник Maytoni Elem DL052</p>
+                            <ul class="items-list-item__list">
+                                <li class="items-list-item__item"><span>Тип: Встраиваемый</span></li>
+                                <li class="items-list-item__item"><span>Тип: Встраиваемый</span></li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
+                            <div class="items-list-item__picture"
+                                style="background-image: url(/assets/img/projects/project-item-4.jpg);"></div>
+                            <p class="items-list-item__descr">Декоративный светодиодный светильник Maytoni Elem DL052</p>
+                            <ul class="items-list-item__list">
+                                <li class="items-list-item__item"><span>Тип: Встраиваемый</span></li>
+                                <li class="items-list-item__item"><span>Тип: Встраиваемый</span></li>
+                            </ul>
+                        </a>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <button class="button button_no-transform"><span>Все решения</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <%= require('../modules/footer.html') %>
+    <% for (key in htmlWebpackPlugin.files.js) { %>
+    <script src="<%= htmlWebpackPlugin.files.js[key] %>" type="text/javascript"></script><% } %>
+</body>
+
+</html>

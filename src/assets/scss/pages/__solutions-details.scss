@@ -1,0 +1,30 @@
+.solution-main {
+    padding: 50px 0 100px;
+
+    
+}
+
+.solution-main-slider {
+    position: relative;
+    padding: 50px 0 0;
+    @include media-m {
+        margin: 0 -15px;
+    }
+
+    &__slide {
+        background-position: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        width: 100%;
+        padding-bottom: 44%;
+        @include media-m {
+            padding-bottom: 85%;
+        }
+    }
+
+    &__pagination {
+        bottom: 20px;
+        right: 20px;
+    }
+}
