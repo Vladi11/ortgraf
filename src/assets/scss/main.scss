@@ -614,6 +614,17 @@ a {
     }
 }
 
+.items-list{
+    &__subtitle {
+        max-width: 770px;
+        font-size: rem(48);
+        @include media-m {
+            text-transform: none;
+            font-size: 28px;
+        }
+    }
+}
+
 .items-list-filters {
     padding: 40px 0 0;
     @include media-m {
@@ -648,11 +659,13 @@ a {
 }
 
 .items-list-item {
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding-bottom: 50px;
     border-bottom: 1px solid $grey;
     max-width: 277px;
     margin: 0 auto 50px;
+    height: calc(100%-50px);
 
     &__title {
         font-size: 24px;
@@ -720,7 +733,7 @@ a {
         line-height: 1.3;
         color: $black-light;
         margin-bottom: 20px;
-        height: 72px;
+        max-height: 72px;
         overflow: hidden;
     }
 
@@ -731,7 +744,12 @@ a {
         color: $black;
     }
 
+    &__list {
+        margin-top: auto;
+    }
+
     &__item {
+        margin-top: auto;
         font-family: "HelveticaNeueCyr", $main-font;
         position: relative;
         padding-left: 12px;

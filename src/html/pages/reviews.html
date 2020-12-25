@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ОРТГРАФ СВЕТ - Отзывы</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <% for (key in htmlWebpackPlugin.files.css) { %>
+    <link href="<%= htmlWebpackPlugin.files.css[key] %>" rel="stylesheet" /><% } %>
+</head>
+
+<body>
+    <%= require('../modules/header.html') %>
+
+    <main class="main">
+        <section class="section banner" style="background-image: url(/assets/img/reviews-banner.jpg);">
+            <div class="wrapper">
+                <div class="banner__content">
+                    <h1 class="banner__title">
+                        <span class="banner__title_red">ОТЗЫВЫ</span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+        <section class="section reviews-main">
+            <div class="wrapper">
+                <div class="reviews-main__list">
+                    <div class="reviews-main__item" data-aos="zoom-in">
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <div class="reviews-main__video">
+                                    <iframe src="https://www.youtube.com/embed/FuCkHzkqeQQ?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <p class="reviews-main__person">Мария Романова</p>
+                                <p class="reviews-main__descr">
+                                    Архитектор<br>
+                                    Студия Архитектуры и Дизайна Анфилада МАРО / Enfilade MARO Studio
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-main__item" data-aos="zoom-in">
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <div class="reviews-main__video">
+                                    <iframe src="https://www.youtube.com/embed/hgzPChglH8k?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <p class="reviews-main__person">Илья Мейтыс</p>
+                                <p class="reviews-main__descr">
+                                    Руководитель<br>
+                                    Архитектурное бюро &quot;АРХКОН&quot;
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-main__item" data-aos="zoom-in">
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <div class="reviews-main__video">
+                                    <iframe src="https://www.youtube.com/embed/bbZrEYvAnCg?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <p class="reviews-main__person">Марина Жеренко</p>
+                                <p class="reviews-main__descr">
+                                    Дизайнер-декоратор<br>
+                                    Компания &quot;Детали счастья&quot;	
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <button class="button button_no-transform"><span>Показать ещё</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%= require('../modules/footer.html') %>
+    <% for (key in htmlWebpackPlugin.files.js) { %>
+    <script src="<%= htmlWebpackPlugin.files.js[key] %>" type="text/javascript"></script><% } %>
+</body>
+
+</html>

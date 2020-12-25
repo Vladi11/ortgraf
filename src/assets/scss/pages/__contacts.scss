@@ -1,0 +1,178 @@
+.contacts-main {
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        span {
+            display: inline-block;
+            vertical-align: top;
+            padding: 8px 0 10px;
+            position: relative;
+            color: $grey-dark;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all .3s ease;
+            cursor: pointer;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                bottom: -3px;
+                left: 0;
+                height: 3px;
+                width: 0;
+                transition: all .3s ease;
+            }
+
+            &:hover,
+            &.active {
+                color: $black;
+                
+                &::after {
+                    width: 100%;
+                    background: $red;
+                }
+            }
+        }
+    }
+
+    &__citys-list {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__city {
+        transition: opacity .3s ease;
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        top: 0;
+        left: 0;
+
+        &.active {
+            position: relative;
+            opacity: 1;
+        }
+
+        &.opacity {
+            opacity: 0;
+        }
+    }
+
+    &__title {
+        font-size: rem(48);
+        line-height: 1.3;
+        text-transform: uppercase;
+        color: $black;
+        margin-bottom: 50px;
+        @include media-m {
+            font-size: 28px;
+        }
+    }
+
+    &__slider {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 100px;
+
+        .slider-arrows {
+            width: calc(100% + 64px);
+            left: -32px;
+            @include media-xxl {
+                display: flex;
+            }
+        }
+
+        .slider-arrows__arrow {
+            border-color: transparent;
+            background: $black;
+
+            &::after {
+                border-color: $white;
+            }
+
+            &_prew {
+                &::after {
+                    margin-right: -36px;
+                }
+            }
+
+            &_next {
+                &::after {
+                    margin-left: -36px;
+                }
+            }
+
+            &:hover {
+                background: $red;
+            }
+        }
+    }
+
+    &__slide {
+        width: 100%;
+        padding-bottom: 59%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        @include media-s {
+            padding-bottom: 122%;
+        }
+    }
+
+    &__pagination {
+        bottom: 20px;
+        right: 20px;
+
+        .swiper-pagination-bullet {
+            color: $grey-dark;
+        }
+    }
+
+    &__subtitle {
+        color: $black;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 23px;
+    }
+
+    &__text {
+        color: $black;
+        font-weight: 300;
+        line-height: 1.4;
+        font-size: 14px;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        a,
+        span {
+            cursor: pointer;
+            color: $red;
+            border-bottom: 1px solid $red;
+
+            &.print {
+                color: $grey-dark;
+                border-bottom: 1px dotted $grey-dark;
+            }
+
+            &.more {
+                color: $grey-dark;
+                border-bottom: 1px dotted $grey-dark;
+                font-weight: bold;
+            }
+        }
+
+        .more-text {
+            display: none;
+            line-height: 1.2;
+            font-weight: normal;
+            margin-top: 15px;
+        }
+    }
+}

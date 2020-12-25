@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ОРТГРАФ СВЕТ - Производители</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <% for (key in htmlWebpackPlugin.files.css) { %>
+    <link href="<%= htmlWebpackPlugin.files.css[key] %>" rel="stylesheet" /><% } %>
+</head>
+
+<body>
+    <%= require('../modules/header.html') %>
+
+    <main class="main">
+        <section class="section banner" style="background-image: url(/assets/img/reviews-banner.jpg);">
+            <div class="wrapper">
+                <div class="banner__content">
+                    <h1 class="banner__title">
+                        <span class="banner__title_red">Производители</span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+        <section class="section producers-main">
+            <div class="wrapper">
+                <div class="producers-main__info">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-3 producers-main__picture">
+                            <div class="producers-main__img">
+                                <svg>
+                                    <use xlink:href="/assets/img/sprite.svg#hands-bg"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-9">
+                            <p class="producers-main__text">
+                                Получить подробную консультацию специалиста нашей компании и заказать продукцию из
+                                нашего каталога вы можете по телефону: <a href="tel:+74952210038">+7 (495) 221 -
+                                    0038</a>.
+                                <br><br>
+                                Мы готовы предложить Вам прямые поставки светотехнического оборудования ведущих
+                                европейских фабрик в минимальные сроки и на выгодных для вас условиях. За подробностями
+                                обращайтесь к менеджерам компании.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="producers-main__list">
+                    <div class="producers-main__logo">
+                        <img src="/assets/img/producers/producers-1.png" alt="">
+                    </div>
+                    <div class="producers-main__logo">
+                        <img src="/assets/img/producers/producers-2.png" alt="">
+                    </div>
+                    <div class="producers-main__logo">
+                        <img src="/assets/img/producers/producers-3.png" alt="">
+                    </div>
+                    <div class="producers-main__logo">
+                        <img src="/assets/img/producers/producers-4.png" alt="">
+                    </div>
+                    <div class="producers-main__logo">
+                        <img src="/assets/img/producers/producers-5.png" alt="">
+                    </div>
+                    <div class="producers-main__logo">
+                        <img src="/assets/img/producers/producers-6.png" alt="">
+                    </div>
+                    <div class="producers-main__logo">
+                        <img src="/assets/img/producers/producers-7.png" alt="">
+                    </div>
+                    <div class="producers-main__logo">
+                        <img src="/assets/img/producers/producers-8.png" alt="">
+                    </div>
+                    <div class="producers-main__logo">
+                        <img src="/assets/img/producers/producers-9.png" alt="">
+                    </div>
+                    <div class="producers-main__logo">
+                        <img src="/assets/img/producers/producers-10.png" alt="">
+                    </div>
+                    <div class="producers-main__logo">
+                        <img src="/assets/img/producers/producers-11.png" alt="">
+                    </div>
+                    <div class="producers-main__logo">
+                        <img src="/assets/img/producers/producers-12.png" alt="">
+                    </div>
+                    <div class="producers-main__logo">
+                        <img src="/assets/img/producers/producers-13.png" alt="">
+                    </div>
+                    <div class="producers-main__logo">
+                        <img src="/assets/img/producers/producers-14.png" alt="">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <%= require('../modules/footer.html') %>
+    <% for (key in htmlWebpackPlugin.files.js) { %>
+    <script src="<%= htmlWebpackPlugin.files.js[key] %>" type="text/javascript"></script><% } %>
+</body>
+
+</html>

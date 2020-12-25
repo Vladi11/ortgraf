@@ -34,12 +34,24 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    app: PATHS.src
+    main: PATHS.src
   },
   output: {
-    filename: `${PATHS.assets}js/scripts.js?v=[contenthash]`,
+    filename: `${PATHS.assets}js/[name].min.js?v=[contenthash]`,
     path: PATHS.build,
     publicPath: '/'
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          name: 'libs',
+          test: /node_modules/,
+          chunks: 'all',
+          enforce: true
+        }
+      }
+    },
   },
   module: {
     rules: [{
@@ -98,7 +110,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/styles.css?v=[hash]`,
+      filename: `${PATHS.assets}css/[name].min.css?v=[hash]`,
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/assets/img`, to: `${PATHS.assets}img` },
