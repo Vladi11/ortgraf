@@ -1,6 +1,6 @@
 // JS 
 import './assets/js/'
-import '../node_modules/svgxuse/svgxuse.js'
+import '../node_modules/svgxuse/svgxuse.min.js'
 
 // SCSS
 import './assets/scss/main.scss'
