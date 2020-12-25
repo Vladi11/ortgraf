@@ -24,16 +24,15 @@
         }
     }
 
-    &__info {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-gap: 35px 30px;
-        @include media-l {
-            grid-template-columns: repeat(2, 1fr);
-            margin-top: 50px;
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 35px;
         }
-        @media screen and (max-width: 750px) {
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    &__info {
+        @include media-l {
+            margin-top: 50px;
         }
     }
 
@@ -51,6 +50,9 @@
         &_red {
             background-color: $red;
             background-image: url("/assets/img/projects-details-red.jpg");
+            @include media-m {
+                margin-bottom: 30px;
+            }
         }
 
         &_black {
@@ -71,11 +73,6 @@
                 text-transform: uppercase;
             }
         }
-    }
-
-    &__descr,
-    &__request {
-        grid-column: 1/-1;
     }
 
     &__descr {
