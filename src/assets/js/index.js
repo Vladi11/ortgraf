@@ -199,6 +199,25 @@ $(document).ready(function () {
         }
     });
 
+    var cooperationMenu = ['Дилерам', 'Заказчикам', 'Архитекторам']
+
+    let sliderCooperationMain = new Swiper('.cooperation-main-slider>.swiper-container', {
+        slidesPerView: 1,
+        autoHeight: true,
+        spaceBetween: 60,
+        navigation: {
+            nextEl: '.cooperation-main-slider__next',
+            prevEl: '.cooperation-main-slider__prev',
+        },
+        pagination: {
+            el: '.cooperation-main-slider__pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<div class="col-4 ' + className + '"><div class="cooperation-num"> <p class="cooperation-num__num">0' + (index + 1) + '</p><p class="cooperation-num__text">' + (cooperationMenu[index]) + '</p></div></div>';
+            },
+        }
+    });
+
     $('.burger').on('click', function () {
         $('.main-menu').toggleClass('open');
         $(this).toggleClass('active');
