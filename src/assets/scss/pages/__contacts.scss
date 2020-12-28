@@ -159,6 +159,16 @@
             &.print {
                 color: $grey-dark;
                 border-bottom: 1px dotted $grey-dark;
+                position: relative;
+                margin-left: 40px;
+                cursor: pointer;
+
+                &::before {
+                    content: url(/assets/img/icons/icon-print.png);
+                    position: absolute;
+                    left: -40px;
+                    top: -3px;
+                }
             }
 
             &.more {

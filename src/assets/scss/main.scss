@@ -165,6 +165,20 @@ a {
             }
         }
     }
+
+    &_bottom {
+        &::after {
+            display: none;
+        }
+        
+        .banner__title {
+            @include media-m {
+                max-width: 100%;
+                text-align: left;
+                font-size: 24px;
+            }
+        }
+    }
 }
 
 .title {
@@ -289,6 +303,31 @@ a {
         }
     }
 
+    &_grey {
+        background: $black;
+        color: $white;
+        border-color: $black;
+        font-size: 16px;
+        padding: 18px 40px;
+        font-weight: bold;
+        @include media-m {
+            padding: 14px 40px;
+        }
+
+        &::after {
+            background: $red;
+        }
+
+        &:hover {
+            color: $white;
+            border-color: $red;
+
+            svg {
+                fill: $white !important;
+            }
+        }
+    }
+    
     &_black {
         background: $black;
         color: $white;
