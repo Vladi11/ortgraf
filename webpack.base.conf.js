@@ -84,10 +84,10 @@ module.exports = {
         MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
-          options: { sourceMap: true }
+          options: { sourceMap: true, url: false }
         }, {
           loader: 'postcss-loader',
-          options: { sourceMap: true, config: { path: `./postcss.config.js` } }
+          options: { sourceMap: true, config: { path: `./postcss.config.js` }, url: false }
         }, {
           loader: 'sass-loader',
           options: { sourceMap: true }
@@ -100,10 +100,10 @@ module.exports = {
         MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
-          options: { sourceMap: true }
+          options: { sourceMap: true, url: false }
         }, {
           loader: 'postcss-loader',
-          options: { sourceMap: true, config: { path: `./postcss.config.js` } }
+          options: { sourceMap: true, config: { path: `./postcss.config.js` }, url: false }
         }
       ]
     }]
