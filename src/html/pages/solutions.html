@@ -126,6 +126,7 @@
         </section>
     </main>
 
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=03eead87-7c74-47b6-8225-a66c904574d8&lang=ru_RU" type="text/javascript"></script>
     <%= require('../modules/footer.html') %>
     <% for (key in htmlWebpackPlugin.files.js) { %>
     <script src="<%= htmlWebpackPlugin.files.js[key] %>" type="text/javascript"></script><% } %>

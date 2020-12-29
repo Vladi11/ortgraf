@@ -30,12 +30,12 @@
                     <div class="row">
                         <div class="col-12 col-md-3">
                             <ul class="contacts-main__list">
-                                <li class="contacts-main__item"><span data-toglle="city" data-city="city-1" class="contacts-main__toggle active">Офисы в Москве</span></li>
-                                <li class="contacts-main__item"><span data-toglle="city" data-city="city-2" class="contacts-main__toggle">Офис в Санкт-Петербурге</span></li>
-                                <li class="contacts-main__item"><span data-toglle="city" data-city="city-3" class="contacts-main__toggle">Офис в Краснодаре</span></li>
-                                <li class="contacts-main__item"><span data-toglle="city" data-city="city-4" class="contacts-main__toggle">Офис в Ростове-на-Дону</span></li>
-                                <li class="contacts-main__item"><span data-toglle="city" data-city="city-5" class="contacts-main__toggle">Представитель в Казани</span></li>
-                                <li class="contacts-main__item"><span data-toglle="city" data-city="city-6" class="contacts-main__toggle">Партнёр в Астане</span></li>
+                                <li class="contacts-main__item"><span data-toglle="city" data-city="1" class="contacts-main__toggle active">Офисы в Москве</span></li>
+                                <li class="contacts-main__item"><span data-toglle="city" data-city="2" class="contacts-main__toggle">Офис в Санкт-Петербурге</span></li>
+                                <li class="contacts-main__item"><span data-toglle="city" data-city="3" class="contacts-main__toggle">Офис в Краснодаре</span></li>
+                                <li class="contacts-main__item"><span data-toglle="city" data-city="4" class="contacts-main__toggle">Офис в Ростове-на-Дону</span></li>
+                                <li class="contacts-main__item"><span data-toglle="city" data-city="5" class="contacts-main__toggle">Представитель в Казани</span></li>
+                                <li class="contacts-main__item"><span data-toglle="city" data-city="6" class="contacts-main__toggle">Партнёр в Астане</span></li>
                             </ul>
                         </div>
                         <div class="col-12 col-md-9">
@@ -276,8 +276,10 @@
                 </div>
             </div>
         </section>
+        <div id="contacts-map"></div>
     </main>
 
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=03eead87-7c74-47b6-8225-a66c904574d8&lang=ru_RU" type="text/javascript"></script>
     <%= require('../modules/footer.html') %>
     <% for (key in htmlWebpackPlugin.files.js) { %>
     <script src="<%= htmlWebpackPlugin.files.js[key] %>" type="text/javascript"></script><% } %>

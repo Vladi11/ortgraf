@@ -8,9 +8,9 @@
     <title>ОРТГРАФ СВЕТ - Blaker</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     
-    <link href="/assets/css/libs.min.css?v=a384465e44cc76e5114b" rel="stylesheet" />
+    <link href="/assets/css/libs.min.css?v=b285e43a4e01f3db7053" rel="stylesheet" />
     
-    <link href="/assets/css/main.min.css?v=a384465e44cc76e5114b" rel="stylesheet" />
+    <link href="/assets/css/main.min.css?v=b285e43a4e01f3db7053" rel="stylesheet" />
     
 </head>
 
@@ -39,7 +39,7 @@
             <div class="header__buttons">
                 <a href="tel:+74952210038" class="header__tel desktop">+7 495 221 00 38</a>
                 <button class="button header__call desktop"><span>Заказать звонок</span></button>
-                <div class="header__button burger">
+                <div class="header__button burger" data-toglle="menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -55,9 +55,9 @@
                         <a href="" class="main-menu__title">О нас</a>
                     </div>
                     <div class="main-menu__col">
-                        <p class="main-menu__title main-menu__title_open">Решения</p>
+                        <p class="main-menu__title main-menu__title_open" data-open="submenu">Решения</p>
                         <ul class="main-menu__list main-menu__submenu">
-                            <li class="main-menu__title main-menu__title_close mobile">Решения</li>
+                            <li class="main-menu__title main-menu__title_close mobile" data-close="submenu">Решения</li>
                             <li class="main-menu__item"><a href="">Для магазинов</a></li>
                             <li class="main-menu__item"><a href="">Уличное освещение</a></li>
                             <li class="main-menu__item"><a href="">Для офисов</a></li>
@@ -73,7 +73,7 @@
                         </ul>
                     </div>
                     <div class="main-menu__col">
-                        <p class="main-menu__title main-menu__title_open">Каталог</p>
+                        <p class="main-menu__title main-menu__title_open" data-open="submenu">Каталог</p>
                         <ul class="main-menu__list desktop">
                             <li class="main-menu__item"><a href="">Внутреннее освещение</a></li>
                             <li class="main-menu__item"><a href="">Декоративные светильники</a></li>
@@ -81,7 +81,7 @@
                             <li class="main-menu__item"><a href="">Лампы</a></li>
                         </ul>
                         <div class="main-menu__submenu submenu-catalog mobile">
-                            <p class="main-menu__title main-menu__title_close mobile">Каталог</p>
+                            <p class="main-menu__title main-menu__title_close mobile" data-close="submenu">Каталог</p>
                             <div class="submenu-catalog__group">
                                 <div class="submenu-catalog__item">
                                     <a href="" class="submenu-catalog__card">
@@ -115,9 +115,9 @@
                         </div>
                     </div>
                     <div class="main-menu__col">
-                        <p class="main-menu__title main-menu__title_open desktop">Информация</p>
+                        <p class="main-menu__title main-menu__title_open desktop" data-open="submenu">Информация</p>
                         <ul class="main-menu__list main-menu__submenu">
-                            <li class="main-menu__title main-menu__title_close mobile">Информация</li>
+                            <li class="main-menu__title main-menu__title_close mobile" data-close="submenu">Информация</li>
                             <li class="main-menu__item"><a href="">О компании</a></li>
                             <li class="main-menu__item"><a href="">Проекты</a></li>
                             <li class="main-menu__item"><a href="">Отзывы</a></li>
@@ -133,9 +133,9 @@
                         <a href="" class="main-menu__title">Сотрудничество</a>
                     </div>
                     <div class="main-menu__col">
-                        <p class="main-menu__title main-menu__title_open">Контакты</p>
+                        <p class="main-menu__title main-menu__title_open" data-open="submenu">Контакты</p>
                         <div class="main-menu__list main-menu__submenu">
-                            <p class="main-menu__title main-menu__title_close mobile">Контакты</p>
+                            <p class="main-menu__title main-menu__title_close mobile" data-close="submenu">Контакты</p>
                             <p class="main-menu__text">Центральный офис<br>в Москве</p>
                             <a class="main-menu__contact" href="tel:+7495663716">+7 (495) 663-71-60</a>
                             <a class="main-menu__contact" href="tel:+78003337160">+7 (800) 333-71-60</a>
@@ -184,157 +184,157 @@
     </div>
 </header>
 
-        <main class="main">
-            <section class="section banner banner_light" style="background-image: url(/assets/img/blaker-banner.jpg);">
-                <div class="wrapper">
-                    <div class="banner__content">
-                        <h1 class="banner__title">
-                            <span class="banner__title_red">Blaker</span>
-                        </h1>
+    <main class="main">
+        <section class="section banner banner_light" style="background-image: url(/assets/img/blaker-banner.jpg);">
+            <div class="wrapper">
+                <div class="banner__content">
+                    <h1 class="banner__title">
+                        <span class="banner__title_red">Blaker</span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="section brand-main">
+            <div class="wrapper">
+                <div class="row align-items-start">
+                    <div class="col-12 col-md-5">
+                        <div class="brand-main__picture">
+                            <img src="/assets/img/logo/logo-blaker.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-7">
+                        <div class="brand-main__decr">
+                            <p class="brand-main__text">
+                                BLAKER — команда профессионалов, которая на&nbsp;протяжении 8&nbsp;лет, создает светодиодные светильники. В&nbsp;основе нашего продукта — высокое качество, надёжность и&nbsp;технологическая модернизация. Опыт работы в&nbsp;области коммерческого, торгового и&nbsp;интерьерного освещения помогают нам создавать успешные проекты и&nbsp;способствовать увеличению ваших продаж.
+                            </p>
+                            <p class="brand-main__text">
+                                <a href="">https://blaker.ru</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </section>
+                <p class="brand-main__subtitle">Освещение от производителя BLAKER</p>
+            </div>
+        </section>
 
-            <section class="section brand-main">
-                <div class="wrapper">
-                    <div class="row align-items-start">
-                        <div class="col-12 col-md-5">
-                            <div class="brand-main__picture">
-                                <img src="/assets/img/logo/logo-blaker.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-7">
-                            <div class="brand-main__decr">
-                                <p class="brand-main__text">
-                                    BLAKER — команда профессионалов, которая на&nbsp;протяжении 8&nbsp;лет, создает светодиодные светильники. В&nbsp;основе нашего продукта — высокое качество, надёжность и&nbsp;технологическая модернизация. Опыт работы в&nbsp;области коммерческого, торгового и&nbsp;интерьерного освещения помогают нам создавать успешные проекты и&nbsp;способствовать увеличению ваших продаж.
-                                </p>
-                                <p class="brand-main__text">
-                                    <a href="">https://blaker.ru</a>
-                                </p>
-                            </div>
-                        </div>
+        <section class="section items-list brand-list">
+            <div class="wrapper">
+                <div class="row justify-content-center items-list__grid">
+                    <div class="col-auto">
+                        <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
+                            <h3 class="items-list-item__title">Название проекта<br>в две строки или<br>в три строки</h3>
+                            <div class="items-list-item__picture"
+                                style="background-image: url(/assets/img/brands/brand-blaker-1.jpg);"></div>
+                            <p class="items-list-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
+                                строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
+                            <p class="items-list-item__subtitle">Реализовано</p>
+                            <ul class="items-list-item__list">
+                                <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
+                                <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
+                            </ul>
+                        </a>
                     </div>
-                    <p class="brand-main__subtitle">Освещение от производителя BLAKER</p>
+                    <div class="col-auto">
+                        <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
+                            <h3 class="items-list-item__title">Астраханский государственный</h3>
+                            <div class="items-list-item__picture"
+                                style="background-image: url(/assets/img/brands/brand-blaker-2.jpg);"></div>
+                            <p class="items-list-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
+                                строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
+                            <p class="items-list-item__subtitle">Реализовано</p>
+                            <ul class="items-list-item__list">
+                                <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
+                                <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
+                            <h3 class="items-list-item__title">Бизнес-отель<br>“Спектр”</h3>
+                            <div class="items-list-item__picture"
+                                style="background-image: url(/assets/img/brands/brand-blaker-3.jpg);"></div>
+                            <p class="items-list-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
+                                строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
+                            <p class="items-list-item__subtitle">Реализовано</p>
+                            <ul class="items-list-item__list">
+                                <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
+                                <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
+                            <h3 class="items-list-item__title">Бизнес-отель<br>“Невский Центр”</h3>
+                            <div class="items-list-item__picture"
+                                style="background-image: url(/assets/img/brands/brand-blaker-4.jpg);"></div>
+                            <p class="items-list-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
+                                строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
+                            <p class="items-list-item__subtitle">Реализовано</p>
+                            <ul class="items-list-item__list">
+                                <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
+                                <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
+                            <h3 class="items-list-item__title">Название проекта<br>в две строки или<br>в три строки</h3>
+                            <div class="items-list-item__picture"
+                                style="background-image: url(/assets/img/brands/brand-blaker-5.jpg);"></div>
+                            <p class="items-list-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
+                                строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
+                            <p class="items-list-item__subtitle">Реализовано</p>
+                            <ul class="items-list-item__list">
+                                <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
+                                <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
+                            <h3 class="items-list-item__title">Астраханский государственный</h3>
+                            <div class="items-list-item__picture"
+                                style="background-image: url(/assets/img/brands/brand-blaker-6.jpg);"></div>
+                            <p class="items-list-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
+                                строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
+                            <p class="items-list-item__subtitle">Реализовано</p>
+                            <ul class="items-list-item__list">
+                                <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
+                                <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
+                            <h3 class="items-list-item__title">Бизнес-отель<br>“Спектр”</h3>
+                            <div class="items-list-item__picture"
+                                style="background-image: url(/assets/img/brands/brand-blaker-7.jpg);"></div>
+                            <p class="items-list-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
+                                строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
+                            <p class="items-list-item__subtitle">Реализовано</p>
+                            <ul class="items-list-item__list">
+                                <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
+                                <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
+                            <h3 class="items-list-item__title">Бизнес-отель<br>“Невский Центр”</h3>
+                            <div class="items-list-item__picture"
+                                style="background-image: url(/assets/img/brands/brand-blaker-8.jpg);"></div>
+                            <p class="items-list-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
+                                строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
+                            <p class="items-list-item__subtitle">Реализовано</p>
+                            <ul class="items-list-item__list">
+                                <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
+                                <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
+                            </ul>
+                        </a>
+                    </div>
                 </div>
-            </section>
-
-            <section class="section items-list brand-list">
-                <div class="wrapper">
-                    <div class="row justify-content-center items-list__grid">
-                        <div class="col-auto">
-                            <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
-                                <h3 class="items-list-item__title">Название проекта<br>в две строки или<br>в три строки</h3>
-                                <div class="items-list-item__picture"
-                                    style="background-image: url(/assets/img/brands/brand-blaker-1.jpg);"></div>
-                                <p class="items-list-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
-                                    строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
-                                <p class="items-list-item__subtitle">Реализовано</p>
-                                <ul class="items-list-item__list">
-                                    <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
-                                    <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
-                                </ul>
-                            </a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
-                                <h3 class="items-list-item__title">Астраханский государственный</h3>
-                                <div class="items-list-item__picture"
-                                    style="background-image: url(/assets/img/brands/brand-blaker-2.jpg);"></div>
-                                <p class="items-list-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
-                                    строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
-                                <p class="items-list-item__subtitle">Реализовано</p>
-                                <ul class="items-list-item__list">
-                                    <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
-                                    <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
-                                </ul>
-                            </a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
-                                <h3 class="items-list-item__title">Бизнес-отель<br>“Спектр”</h3>
-                                <div class="items-list-item__picture"
-                                    style="background-image: url(/assets/img/brands/brand-blaker-3.jpg);"></div>
-                                <p class="items-list-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
-                                    строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
-                                <p class="items-list-item__subtitle">Реализовано</p>
-                                <ul class="items-list-item__list">
-                                    <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
-                                    <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
-                                </ul>
-                            </a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
-                                <h3 class="items-list-item__title">Бизнес-отель<br>“Невский Центр”</h3>
-                                <div class="items-list-item__picture"
-                                    style="background-image: url(/assets/img/brands/brand-blaker-4.jpg);"></div>
-                                <p class="items-list-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
-                                    строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
-                                <p class="items-list-item__subtitle">Реализовано</p>
-                                <ul class="items-list-item__list">
-                                    <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
-                                    <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
-                                </ul>
-                            </a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
-                                <h3 class="items-list-item__title">Название проекта<br>в две строки или<br>в три строки</h3>
-                                <div class="items-list-item__picture"
-                                    style="background-image: url(/assets/img/brands/brand-blaker-5.jpg);"></div>
-                                <p class="items-list-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
-                                    строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
-                                <p class="items-list-item__subtitle">Реализовано</p>
-                                <ul class="items-list-item__list">
-                                    <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
-                                    <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
-                                </ul>
-                            </a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
-                                <h3 class="items-list-item__title">Астраханский государственный</h3>
-                                <div class="items-list-item__picture"
-                                    style="background-image: url(/assets/img/brands/brand-blaker-6.jpg);"></div>
-                                <p class="items-list-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
-                                    строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
-                                <p class="items-list-item__subtitle">Реализовано</p>
-                                <ul class="items-list-item__list">
-                                    <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
-                                    <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
-                                </ul>
-                            </a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
-                                <h3 class="items-list-item__title">Бизнес-отель<br>“Спектр”</h3>
-                                <div class="items-list-item__picture"
-                                    style="background-image: url(/assets/img/brands/brand-blaker-7.jpg);"></div>
-                                <p class="items-list-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
-                                    строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
-                                <p class="items-list-item__subtitle">Реализовано</p>
-                                <ul class="items-list-item__list">
-                                    <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
-                                    <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
-                                </ul>
-                            </a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="/project-details.html" class="items-list__item items-list-item" data-aos="zoom-in">
-                                <h3 class="items-list-item__title">Бизнес-отель<br>“Невский Центр”</h3>
-                                <div class="items-list-item__picture"
-                                    style="background-image: url(/assets/img/brands/brand-blaker-8.jpg);"></div>
-                                <p class="items-list-item__descr">Здесь идет небольшое описание реализованного проекта в несколько
-                                    строк, предположительно где то около пяти - шести строк, скорее всего так.</p>
-                                <p class="items-list-item__subtitle">Реализовано</p>
-                                <ul class="items-list-item__list">
-                                    <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
-                                    <li class="items-list-item__item"><span>замена всех фасадных ламп</span></li>
-                                </ul>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="pagination">
+                <div class="pagination">
     <p class="active">1</p>
     <p>2</p>
     <p>3</p>
@@ -344,11 +344,12 @@
     <p>8</p>
     <p>Все</p>
 </div>
-                </div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
-        <footer class="footer">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=03eead87-7c74-47b6-8225-a66c904574d8&lang=ru_RU" type="text/javascript"></script>
+    <footer class="footer">
     <div class="wrapper">
         <div class="footer__big">
             <div class="row">
@@ -516,11 +517,11 @@
         </div>
     </div>
 </footer>
-        
-        <script src="/assets/js/libs.min.js?v=cc8b1a27aa650e3f6737" type="text/javascript"></script>
-        
-        <script src="/assets/js/main.min.js?v=101b9ed37da7ed75eaf4" type="text/javascript"></script>
-        
+    
+    <script src="/assets/js/libs.min.js?v=cc8b1a27aa650e3f6737" type="text/javascript"></script>
+    
+    <script src="/assets/js/main.min.js?v=70e47a90f39a6bc0b60c" type="text/javascript"></script>
+    
 </body>
 
 </html>
