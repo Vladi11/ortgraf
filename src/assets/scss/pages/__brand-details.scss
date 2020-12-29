@@ -1,0 +1,52 @@
+.brand-main {
+    padding-bottom: 0;
+    @include media-m {
+        padding-bottom: 0;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 1.3;
+        color: $black-light;
+        margin: 0;
+        font-family: "HelveticaNeueCyr", $main-font;
+
+        &:first-child {
+            @include media-m {
+                margin-top: 30px;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        a {
+            font-family: "HelveticaNeueCyr", $main-font;
+            font-size: 20px;
+            line-height: 1.3;
+            margin-top: 30px;
+            color: $red;
+            border-bottom: 1px solid transparent;
+            transition: all .3s ease;
+
+            &:hover {
+                border-color: $red;
+            }
+        }
+    }
+
+    &__subtitle {
+        margin-top: 90px;
+        font-size: rem(28);
+        line-height: 1.3;
+        color: $black;
+        @include media-m {
+            margin-top: 50px;
+        }
+    }
+}
+
+.brand-list {
+    padding-top: 60px;
+}

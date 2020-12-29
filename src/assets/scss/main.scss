@@ -166,6 +166,12 @@ a {
         }
     }
 
+    &_light {
+        &::after {
+            display: none;
+        }
+    }
+
     &_bottom {
         &::after {
             display: none;
