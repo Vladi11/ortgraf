@@ -193,13 +193,11 @@ $(document).ready(function () {
         pagination: {
             el: '.contacts-main__pagination',
             clickable: true
-        },
-        autoplay: {
-            delay: 5000,
         }
     });
 
-    var cooperationMenu = ['Дилерам', 'Заказчикам', 'Архитекторам']
+
+    let cooperationMenu = ['Дилерам', 'Заказчикам', 'Архитекторам']
 
     let sliderCooperationMain = new Swiper('.cooperation-main-slider>.swiper-container', {
         slidesPerView: 1,
@@ -218,17 +216,17 @@ $(document).ready(function () {
         }
     });
 
-    $('.burger').on('click', function () {
+    $('body').on('click', '[data-toglle="menu"]', function () {
         $('.main-menu').toggleClass('open');
         $(this).toggleClass('active');
         $('.main-menu__submenu').removeClass('open');
     });
 
-    $('.main-menu__title_open').on('click', function () {
+    $('body').on('click', '[data-open="submenu"]', function () {
         $(this).parents('.main-menu__col').children('.main-menu__submenu').addClass('open');
     });
 
-    $('.main-menu__title_close').on('click', function () {
+    $('body').on('click', '[data-close="submenu"]', function () {
         $(this).parents('.main-menu__col').children('.main-menu__submenu').removeClass('open');
     });
 
@@ -241,10 +239,67 @@ $(document).ready(function () {
         $('.contacts-main__toggle').removeClass('active');
         $(this).addClass('active');
         $('.contacts-main__city').removeClass('active');
-        $(`#${activeCity}`).addClass('active');
-        $(`#${activeCity}`).addClass('opacity');
+        $(`#city-${activeCity}`).addClass('active');
+        $(`#city-${activeCity}`).addClass('opacity');
         setTimeout(function(){
-            $(`#${activeCity}`).removeClass('opacity');
+            $(`#city-${activeCity}`).removeClass('opacity');
         }, 150);
     });
+
+    
+    function init() {
+        let myMap = new ymaps.Map('contacts-map', {
+            center: [55.787229, 37.670896],
+            zoom: 12,
+            controls: []
+        }, {
+            searchControlProvider: 'yandex#search'
+        });
+
+        let placeMark = (city) => new ymaps.Placemark(city, {
+            hintContent: 'ОРТГРАФ Свет',
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '/assets/img/icons/icon-map.png'
+        });
+        
+        let adreesList = [
+            [55.787229, 37.670896],
+            [55.751518, 37.670097],
+            [59.92138, 30.286179],
+            [45.054767, 39.001409],
+            [47.244729, 39.723187],
+            [55.826306, 49.107474],
+            [55.643002,49.205849]
+        ];
+
+        adreesList.forEach(adress => {
+            myMap.geoObjects.add(placeMark(adress));
+        });
+        
+        let city_1 = [55.767195, 37.630382];
+        let city_2 = [59.92138, 30.286179];
+        let city_3 = [45.054767, 39.001409];
+        let city_4 = [47.244729, 39.723187];
+        let city_5 = [55.826306, 49.107474];
+        let city_6 = [55.643002,49.205849];
+
+        myMap.setCenter(city_1);
+
+
+        $('body').on('click', '[data-toglle="city"]', function () {
+            let $this = $(this);
+            $('.contacts-main__toggle').removeClass('active');
+            if (!$this.hasClass('active')) {
+                $this.addClass('active');
+    
+                let city = `city_${$this.data('city')}`;
+
+                myMap.setCenter(eval(city));
+                myMap.setZoom(12);
+            };
+        });
+    }
+    
+    ymaps.ready(init);
 });
