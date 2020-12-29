@@ -49,7 +49,7 @@
 
         &_red {
             background-color: $red;
-            background-image: url("/assets/img/projects-details-red.jpg");
+            background-image: url("../img/projects-details-red.jpg");
             @include media-m {
                 margin-bottom: 30px;
             }
@@ -57,7 +57,7 @@
 
         &_black {
             background-color: $black;
-            background-image: url("/assets/img/projects-details-black.jpg");
+            background-image: url("../img/projects-details-black.jpg");
         }
 
         p {
