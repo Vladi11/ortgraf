@@ -234,6 +234,15 @@ $(document).ready(function () {
         $(this).next().slideToggle();
     });
 
+    $('body').on('click', '[data-toggle="map-city-info"]', function () {
+        $('.about-map__info').removeClass('active');
+        $(this).addClass('active');
+        $('.about-map__info').find('.about-map__deskr').removeClass('active');
+        setTimeout(function(){
+            $('.about-map__info').find('.about-map__deskr').addClass('active');
+        }, 200);
+    });
+
     $('body').on('click', '[data-toglle="city"]', function () {
         let activeCity = $(this).data('city');
         $('.contacts-main__toggle').removeClass('active');
