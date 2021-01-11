@@ -5,6 +5,10 @@
         display: flex;
         align-items: center;
         margin-bottom: 100px;
+        @include media-s {
+            flex-direction: column;
+            margin-bottom: 60px;
+        }
     }
 
     &__icon {
@@ -13,6 +17,12 @@
         justify-content: center;
         margin-right: 50px;
         min-width: 70px;
+        @include media-s {
+            margin-right: 0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid $grey-dark;
+        }
 
         img {
             max-width: 100%;
@@ -23,6 +33,10 @@
     &__fact {
         padding-left: 51px;
         position: relative;
+        @include media-s {
+            padding-left: 0;
+            width: 100%;
+        }
 
         &:after {
             content: "";
@@ -33,6 +47,9 @@
             position: absolute;
             left: 0;
             top: -5px;
+            @include media-s {
+                display: none;
+            }
         }
 
         p:first-child {
@@ -65,6 +82,9 @@
     &__list {
         margin-top: 60px;
         margin-left: 180px;
+        @include media-l {
+            margin-left: 0;
+        }
     }
 
     &__item {
@@ -81,38 +101,65 @@
 
         &:nth-of-type(2) {
             margin-left: 88px;
+            @include media-l {
+                margin-left: 0;
+            }
         }
 
         &:nth-of-type(3) {
             margin-left: 176px;
+            @include media-l {
+                margin-left: 0;
+            }
         }
 
         &:nth-of-type(4) {
             margin-left: 264px;
+            @include media-l {
+                margin-left: 0;
+            }
         }
 
         &:nth-of-type(5) {
             margin-left: 352px;
+            @include media-l {
+                margin-left: 0;
+            }
         }
 
         &:nth-of-type(6) {
             margin-left: 440px;
+            @include media-l {
+                margin-left: 0;
+            }
         }
 
         &:nth-of-type(7) {
             margin-left: 352px;
+            @include media-l {
+                margin-left: 0;
+            }
         }
 
         &:nth-of-type(8) {
             margin-left: 264px;
+            @include media-l {
+                margin-left: 0;
+            }
         }
 
         &:nth-of-type(9) {
             margin-left: 176px;
+            @include media-l {
+                margin-left: 0;
+            }
         }
 
         &:nth-of-type(10) {
             margin-left: 88px;
+            @include media-l {
+                margin-left: 0;
+            }
         }
 
         &:nth-of-type(11) {
@@ -121,6 +168,9 @@
 
         &:nth-of-type(12) {
             margin-left: 88px;
+            @include media-l {
+                margin-left: 0;
+            }
         }
     }
 
@@ -164,6 +214,9 @@
         letter-spacing: 0.655em;
         text-transform: uppercase;
         margin-bottom: 30px;
+        @include media-l {
+            font-size: rem(38);
+        }
     }
 
     &__stat {
@@ -210,11 +263,6 @@
     &__map {
         margin-bottom: 60px;
         position: relative;
-
-        svg {
-            width: 100%;
-            height: 693px;
-        }
     }
 
     &__buttons {
@@ -298,18 +346,18 @@
         position: absolute;
 
         &:nth-child(1) {
-            top: 395px;
-            left: 143px;
+            top: 355px;
+            left: 128px;
         }
 
         &:nth-child(2) {
-            bottom: 155px;
-            left: 85px;
+            bottom: 140px;
+            left: 75px;
         }
 
         &:nth-child(3) {
-            bottom: 145px;
-            left: 48px;
+            bottom: 130px;
+            left: 41px;
         }
 
         &.active {
