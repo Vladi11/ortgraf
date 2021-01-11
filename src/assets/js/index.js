@@ -136,7 +136,8 @@ $(document).ready(function () {
     let sliderProjectsThumbs = new Swiper('.projects-gallery__thumbs>.swiper-container', {
         slidesPerView: 'auto',
         spaceBetween: 20,
-        freeMode: true,
+        centeredSlides: true,
+        touchRatio: 0.2,
         slideToClickedSlide: true,
         scrollbar: {
             el: '.projects-gallery__scrollbar',
