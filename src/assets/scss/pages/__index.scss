@@ -584,7 +584,7 @@
 
         &_rewerce {
             flex-direction: row-reverse;
-            justify-content: flex-start;
+            justify-content: space-between;
             max-width: 100%;
             @include media-l {
                 flex-direction: column-reverse;
@@ -607,8 +607,8 @@
 
     &__label {
         border: 1px solid $grey;
-        min-height: 44px;
-        margin: 15px 20px 15px 0;
+        min-height: 45px;
+        margin: 0 20px 0 0;
         display: flex;
         align-items: center;
         padding: 0 18px;
@@ -649,6 +649,8 @@
     }
 
     .button {
+        display: block;
+        border-left: 1px solid $red;
         @include media-l {
             min-width: 100%;
             width: 100%;
@@ -661,10 +663,19 @@
             }
         }
         
-        &:hover ~ &__label {
-            border-color: $black;
-            @include media-l {
-                border: none;
+        &:hover {
+            background: #fff;
+
+            &::after {
+                display: none;
+            }
+            
+            & ~ .consult__label {
+                border-color: $black;
+                @include media-l {
+                    margin: 0;
+                    border: none;
+                }
             }
         }
     }
