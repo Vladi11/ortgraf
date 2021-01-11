@@ -137,8 +137,7 @@ $(document).ready(function () {
         slidesPerView: 'auto',
         spaceBetween: 20,
         freeMode: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
+        slideToClickedSlide: true,
         scrollbar: {
             el: '.projects-gallery__scrollbar',
             hide: false,
@@ -152,11 +151,11 @@ $(document).ready(function () {
         navigation: {
             nextEl: '.projects-gallery__next',
             prevEl: '.projects-gallery__prew',
-        },
-        thumbs: {
-            swiper: sliderProjectsThumbs
         }
     });
+
+    sliderProjectsThumbs.controller.control = sliderProjectsGalleryTop;
+    sliderProjectsGalleryTop.controller.control = sliderProjectsThumbs;
 
     let sliderNewsMain = new Swiper('.news-main__slider>.swiper-container', {
         slidesPerView: 1,
