@@ -155,8 +155,10 @@ $(document).ready(function () {
         }
     });
 
-    sliderProjectsThumbs.controller.control = sliderProjectsGalleryTop;
-    sliderProjectsGalleryTop.controller.control = sliderProjectsThumbs;
+    if (window.location.pathname == '/project-details.html') {
+        sliderProjectsThumbs.controller.control = sliderProjectsGalleryTop;
+        sliderProjectsGalleryTop.controller.control = sliderProjectsThumbs;
+    }
 
     let sliderNewsMain = new Swiper('.news-main__slider>.swiper-container', {
         slidesPerView: 1,
@@ -255,60 +257,63 @@ $(document).ready(function () {
         }, 150);
     });
 
-    
-    function init() {
-        let myMap = new ymaps.Map('contacts-map', {
-            center: [55.787229, 37.670896],
-            zoom: 12,
-            controls: []
-        }, {
-            searchControlProvider: 'yandex#search'
-        });
+    if (window.location.pathname == '/contacts.html') {
 
-        let placeMark = (city) => new ymaps.Placemark(city, {
-            hintContent: 'ОРТГРАФ Свет',
-        }, {
-            iconLayout: 'default#image',
-            iconImageHref: '/assets/img/icons/icon-map.png'
-        });
+        function init() {
+            let myMap = new ymaps.Map('contacts-map', {
+                center: [55.787229, 37.670896],
+                zoom: 12,
+                controls: []
+            }, {
+                searchControlProvider: 'yandex#search'
+            });
+
+            let placeMark = (city) => new ymaps.Placemark(city, {
+                hintContent: 'ОРТГРАФ Свет',
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: '/assets/img/icons/icon-map.png'
+            });
+            
+            let adreesList = [
+                [55.787229, 37.670896],
+                [55.751518, 37.670097],
+                [59.92138, 30.286179],
+                [45.054767, 39.001409],
+                [47.244729, 39.723187],
+                [55.826306, 49.107474],
+                [55.643002,49.205849]
+            ];
+
+            adreesList.forEach(adress => {
+                myMap.geoObjects.add(placeMark(adress));
+            });
+            
+            let city_1 = [55.767195, 37.630382];
+            let city_2 = [59.92138, 30.286179];
+            let city_3 = [45.054767, 39.001409];
+            let city_4 = [47.244729, 39.723187];
+            let city_5 = [55.826306, 49.107474];
+            let city_6 = [55.643002,49.205849];
+
+            myMap.setCenter(city_1);
+
+
+            $('body').on('click', '[data-toglle="city"]', function () {
+                let $this = $(this);
+                $('.contacts-main__toggle').removeClass('active');
+                if (!$this.hasClass('active')) {
+                    $this.addClass('active');
         
-        let adreesList = [
-            [55.787229, 37.670896],
-            [55.751518, 37.670097],
-            [59.92138, 30.286179],
-            [45.054767, 39.001409],
-            [47.244729, 39.723187],
-            [55.826306, 49.107474],
-            [55.643002,49.205849]
-        ];
+                    let city = `city_${$this.data('city')}`;
 
-        adreesList.forEach(adress => {
-            myMap.geoObjects.add(placeMark(adress));
-        });
+                    myMap.setCenter(eval(city));
+                    myMap.setZoom(12);
+                };
+            });
+        }
         
-        let city_1 = [55.767195, 37.630382];
-        let city_2 = [59.92138, 30.286179];
-        let city_3 = [45.054767, 39.001409];
-        let city_4 = [47.244729, 39.723187];
-        let city_5 = [55.826306, 49.107474];
-        let city_6 = [55.643002,49.205849];
+        ymaps.ready(init);
 
-        myMap.setCenter(city_1);
-
-
-        $('body').on('click', '[data-toglle="city"]', function () {
-            let $this = $(this);
-            $('.contacts-main__toggle').removeClass('active');
-            if (!$this.hasClass('active')) {
-                $this.addClass('active');
-    
-                let city = `city_${$this.data('city')}`;
-
-                myMap.setCenter(eval(city));
-                myMap.setZoom(12);
-            };
-        });
-    }
-    
-    ymaps.ready(init);
+    }    
 });
