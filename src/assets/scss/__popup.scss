@@ -181,4 +181,8 @@
     @include media-s {
         pointer-events: none;
     }    
+
+    path {
+        fill: $grey;
+    }
 }
