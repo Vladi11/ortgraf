@@ -177,12 +177,16 @@
     }
 }
 
-.fancybox-button svg {
-    @include media-s {
-        pointer-events: none;
-    }    
+.fancybox-button {
+    opacity: 1;
 
-    path {
-        fill: $grey;
+    svg {
+        @include media-s {
+            pointer-events: none;
+        }    
+    
+        path {
+            fill: $grey;
+        }
     }
 }
