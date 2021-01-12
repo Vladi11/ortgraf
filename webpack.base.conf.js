@@ -122,6 +122,7 @@ module.exports = {
         }),
         new webpack.ProvidePlugin({
             $: 'jquery/dist/jquery.min.js',
+            jQuery: 'jquery/dist/jquery.min.js',
             Swiper: 'swiper/dist/js/swiper.min.js',
             AOS: 'aos'
         })

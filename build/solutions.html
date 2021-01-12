@@ -8,8 +8,8 @@
     <title>ОРТГРАФ СВЕТ - Решения</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     
-    <link href="/assets/css/libs.min.css?v=2612c6c64cb0900c1f17" rel="stylesheet" />
-    <link href="/assets/css/main.min.css?v=2612c6c64cb0900c1f17" rel="stylesheet" />
+    <link href="/assets/css/libs.min.css?v=873bf7c3c5759733ddf1" rel="stylesheet" />
+    <link href="/assets/css/main.min.css?v=873bf7c3c5759733ddf1" rel="stylesheet" />
 </head>
 
 <body>
@@ -36,7 +36,7 @@
             </nav>
             <div class="header__buttons">
                 <a href="tel:+74952210038" class="header__tel desktop">+7 495 221 00 38</a>
-                <button class="button header__call desktop"><span>Заказать звонок</span></button>
+                <a data-fancybox data-animation-duration="700" data-src="#call-request" href="javascript:;" class="button header__call desktop"><span>Заказать звонок</span></a>
                 <div class="header__button burger" data-toglle="menu">
                     <span></span>
                     <span></span>
@@ -152,7 +152,7 @@
                     </div>
                     <div class="main-menu__buttons">
                         <a href="tel:+7495663716" class="button"><span>позвонить</span></a>
-                        <button class="button"><span>перезвоните мне</span></button>
+                        <a data-fancybox data-animation-duration="700" data-src="#call-request" href="javascript:;" class="button"><span>перезвоните мне</span></a>
                     </div>
                 </div>
                 <div class="main-menu__social social">
@@ -191,7 +191,7 @@
                     </h1>
                     <p class="banner__descr">Разработка и внедрение профессиональных
                         систем освещения</p>
-                    <button class="button button_red banner__button"><span>Получить консультацию</span></button>
+                    <a data-fancybox data-animation-duration="700" data-src="#consult-request" class="button button_red banner__button"><span>Получить консультацию</span></a>
                 </div>
             </div>
         </section>
@@ -444,7 +444,7 @@
                 </div>
                 <div class="footer-mobile__buttons">
                     <a href="tel:+7495663716" class="button"><span>позвонить</span></a>
-                    <a href="" class="button"><span>перезвоните мне</span></a>
+                    <a data-fancybox data-animation-duration="700" data-src="#call-request" href="javascript:;" class="button"><span>перезвоните мне</span></a>
                 </div>
             </div>
             <div class="footer__social social">
@@ -470,11 +470,97 @@
                 </a>
             </div>
         </div>
+
+        <div class="pop-ups">
+
+            <form style="display: none;" id="call-request" class="pop-up">
+                <p class="pop-up__title">Заказать звонок</p>
+                <div class="pop-up__area">
+                    <label class="pop-up__field">
+                        <input type="text">
+                        <p>Ваше имя</p>
+                    </label>
+                    <label class="pop-up__field">
+                        <input type="text">
+                        <p>Телефон</p>
+                    </label>
+                    <div class="pop-up__privacy">
+                        <label>
+                            <input type="checkbox" name="privacy-policy" id="privacy-policy">
+                            <div>
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                                    <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                </svg>                                    
+                            </div>
+                        </label>
+                        <p>Нажимая кнопку «Отправить», я соглашаюсь с <a href="">политикой конфиденциальности</a></p>
+                    </div>
+                </div>
+                <button class="button button_grey pop-up__button"><span>отправить</span></button>
+            </form>
+
+            <form style="display: none;" id="consult-request" class="pop-up">
+                <p class="pop-up__title">Получить консультацию</p>
+                <div class="pop-up__area">
+                    <label class="pop-up__field">
+                        <input type="text">
+                        <p>Ваше имя</p>
+                    </label>
+                    <label class="pop-up__field">
+                        <input type="text">
+                        <p>Телефон</p>
+                    </label>
+                    <div class="pop-up__privacy">
+                        <label>
+                            <input type="checkbox" name="privacy-policy" id="privacy-policy">
+                            <div>
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                                    <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                </svg>                                    
+                            </div>
+                        </label>
+                        <p>Нажимая кнопку «Отправить», я соглашаюсь с <a href="">политикой конфиденциальности</a></p>
+                    </div>
+                </div>
+                <button class="button button_grey pop-up__button"><span>отправить</span></button>
+            </form>
+
+            <form style="display: none;" id="calc-request" class="pop-up">
+                <p class="pop-up__title">Рассчитать проект</p>
+                <div class="pop-up__area">
+                    <label class="pop-up__field">
+                        <input type="text">
+                        <p>Ваше имя</p>
+                    </label>
+                    <label class="pop-up__field">
+                        <input type="text">
+                        <p>Телефон</p>
+                    </label>
+                    <label class="pop-up__field">
+                        <textarea name="" id=""></textarea>
+                        <p>Примечание</p>
+                    </label>
+                    <div class="pop-up__privacy">
+                        <label>
+                            <input type="checkbox" name="privacy-policy" id="privacy-policy">
+                            <div>
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                                    <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                </svg>                                    
+                            </div>
+                        </label>
+                        <p>Нажимая кнопку «Отправить», я соглашаюсь с <a href="">политикой конфиденциальности</a></p>
+                    </div>
+                </div>
+                <button class="button button_grey pop-up__button"><span>отправить</span></button>
+            </form>
+
+        </div>
     </div>
 </footer>
     
-    <script src="/assets/js/libs.min.js?v=cc8b1a27aa650e3f6737" type="text/javascript"></script>
-    <script src="/assets/js/main.min.js?v=b54af8496eaa10fffb67" type="text/javascript"></script>
+    <script src="/assets/js/libs.min.js?v=7d236cc14c3a38d5274c" type="text/javascript"></script>
+    <script src="/assets/js/main.min.js?v=60d45fa1e1ff3f01a539" type="text/javascript"></script>
 </body>
 
 </html>

@@ -1,0 +1,184 @@
+.pop-up {
+    width: 100%;
+    max-width: 550px;
+    padding: 50px 60px 60px;
+    overflow: hidden;
+    transform: translateY(-50px);
+    transition: all .7s;
+    cursor: auto !important;
+    @include media-s {
+        padding: 60px 20px;
+        vertical-align: top;
+        min-height: 100%;
+    }
+
+    &__title,
+    &__area {
+        transform: translateY(-50px);
+        opacity: 0;
+        transition-property: transform, opacity;
+        transition-duration: .4s;
+    }
+
+    &__button {
+        transform: translateY(50px);
+        opacity: 0;
+        transition-property: transform, opacity;
+        transition-duration: .4s;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: rem(36);
+        line-height: 1.43;
+        font-weight: 400;
+    }
+
+    &__area {
+        margin-top: 50px;
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: $black;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 1.3;
+            transition: color .3s ease-in-out;
+        }
+
+        input,
+        textarea {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            border: none;
+            border-bottom: 2px solid $black;
+            font-size: 18px;
+            line-height: 1.3;
+            color: $black;
+            padding: 8px 0;
+
+            &:focus ~ p {
+                color: $red;
+            }
+        }
+
+        textarea {
+            min-width: 100%;
+            min-height: 200px;
+        }
+    }
+
+    &__privacy {
+        display: flex;
+        align-items: center;
+
+        label {
+            position: relative;
+            display: block;
+            min-width: 20px;
+            min-height: 20px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid $black;
+            cursor: pointer;
+
+            div {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $black;
+                opacity: 0;
+                transition:  all .3s ease-in-out;
+            }
+
+            input {
+                position: absolute;
+                border: none;
+                padding: 0;
+                margin: 0;
+                width: 0;
+                height: 0;
+                left: 0;
+                top: 0;
+
+                &:checked ~ div{
+                    opacity: 1;
+                }
+            }
+        }
+
+        P {
+            color: $grey-dark;
+            font-size: 14px;
+            line-height: 1.3;
+            padding-left: 14px;
+            max-width: 342px;
+
+            a {
+                color: $black;
+                text-decoration: underline;
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
+
+    &__button {
+        display: block;
+        min-width: 310px;
+        margin: 50px auto 0;
+    }
+}
+
+
+.fancybox-slide--current {
+    .pop-up,
+    .pop-up__title,
+    .pop-up__area, 
+    .pop-up__button  {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .pop-up {
+        &__title {
+            transition-delay: .1s;
+        }      
+        
+        &__area {
+            transition-delay: .3s;
+        }
+
+        &__button {
+            transition-delay: .3s;
+        }
+    }
+}
+
+.fancybox-slide {
+    @include media-s {
+        background: #fff;
+    }
+}
+
+.fancybox-button svg {
+    @include media-s {
+        pointer-events: none;
+    }    
+}

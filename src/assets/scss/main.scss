@@ -830,6 +830,7 @@ a {
 @import "__header";
 @import "pages/pages";
 @import "__footer";
+@import "__popup";
 
 .mobile {
     @media screen and (min-width: $over-m-hide) {
