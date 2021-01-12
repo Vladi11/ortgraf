@@ -169,4 +169,8 @@
     <symbol id="map-marker" viewBox="0 0 12 12">
         <path d="M0.398081 10.0061C2.34505 12.9942 10.7819 12.6045 11.9501 8.96675C12.2231 7.25885 11.3477 4.90435 10.0031 3.0177C7.14758 -1.29684 4.04716 -0.775525 1.62034 3.25032C0.177071 5.64455 -0.483922 8.65243 0.398081 10.0061Z" fill="#DE1F24"/>
     </symbol>
+
+    <symbol id="check" fill="none"viewBox="0 0 10 8">
+        <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
 </svg>
