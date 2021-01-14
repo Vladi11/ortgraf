@@ -37,21 +37,9 @@ module.exports = {
         main: PATHS.src
     },
     output: {
-        filename: `${PATHS.assets}js/[name].min.js?v=[contenthash]`,
+        filename: `${PATHS.assets}js/[name].js?v=[contenthash]`,
         path: PATHS.build,
         publicPath: '/'
-    },
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                vendor: {
-                    name: 'libs',
-                    test: /node_modules/,
-                    chunks: 'all',
-                    enforce: true
-                }
-            }
-        },
     },
     module: {
         rules: [{
@@ -107,6 +95,19 @@ module.exports = {
                 }
             ]
         }]
+    },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    name: 'libs',
+                    test: /node_modules/,
+                    chunks: 'all',
+                    enforce: true
+                }
+            }
+        },
+        minimize: false
     },
     plugins: [
         new MiniCssExtractPlugin({
