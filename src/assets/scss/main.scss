@@ -266,7 +266,8 @@ a {
         z-index: 1;
     }
 
-    &:hover {
+    &:hover,
+    &.active {
         color: $white;
         border-color: $white;
 
@@ -299,7 +300,8 @@ a {
             background: $white;
         }
 
-        &:hover {
+        &:hover,
+        &.active {
             color: $red;
             border-color: $red;
 
@@ -324,7 +326,8 @@ a {
             background: $red;
         }
 
-        &:hover {
+        &:hover,
+        &.active {
             color: $white;
             border-color: $red;
 
@@ -343,7 +346,8 @@ a {
             background: $red;
         }
 
-        &:hover {
+        &:hover,
+        &.active {
             color: $white;
             border-color: $red;
 
@@ -510,7 +514,7 @@ a {
     max-width: 545px;
     margin: 0 auto 50px;
 
-    p {
+    &__item {
         width: 55px;
         height: 55px;
         color: $white;
@@ -518,7 +522,6 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-        cursor: pointer;
         font-size: 18px;
         font-family: "HelveticaNeueCyr", $main-font;
         border: 1px solid $black;
