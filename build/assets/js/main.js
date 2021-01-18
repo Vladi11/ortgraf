@@ -340,6 +340,23 @@ window.jQuery = window.$ = $;
     sliderProjectsGalleryTop.controller.control = sliderProjectsThumbs;
   }
 
+  var sliderProductThumbs = new Swiper('.product-gallery__thumbs>.swiper-container', {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    centeredSlides: true,
+    touchRatio: 0.2,
+    slideToClickedSlide: true
+  });
+  var sliderProductGalleryTop = new Swiper('.product-gallery__top>.swiper-container', {
+    spaceBetween: 20,
+    slidesPerView: 1
+  });
+
+  if (window.location.pathname == '/product-details.html') {
+    sliderProductThumbs.controller.control = sliderProductGalleryTop;
+    sliderProductGalleryTop.controller.control = sliderProductThumbs;
+  }
+
   var sliderNewsMain = new Swiper('.news-main__slider>.swiper-container', {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -373,6 +390,14 @@ window.jQuery = window.$ = $;
     pagination: {
       el: '.contacts-main__pagination',
       clickable: true
+    }
+  });
+  var sliderProductList = new Swiper('.product-list__slider>.swiper-container', {
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.product-list__slider .slider-arrows__arrow_next',
+      prevEl: '.product-list__slider .slider-arrows__arrow_prew'
     }
   });
   var cooperationMenu = ['Дилерам', 'Заказчикам', 'Архитекторам'];
@@ -424,6 +449,13 @@ window.jQuery = window.$ = $;
     setTimeout(function () {
       $("#city-".concat(activeCity)).removeClass('opacity');
     }, 150);
+  });
+  $('body').on('click', '[data-product-toggle="tabs"]', function () {
+    $('.product-more__title').removeClass('active');
+    $(this).addClass('active');
+    var activeTab = $(this).data('product-more');
+    $('.product-more__content').removeClass('active');
+    $(".".concat(activeTab)).addClass('active');
   });
 
   if (window.location.pathname == '/contacts.html') {
