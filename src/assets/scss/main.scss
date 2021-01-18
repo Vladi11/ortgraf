@@ -507,6 +507,45 @@ a {
     }
 }
 
+.breadcrumbs {
+    padding: 40px 0 20px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: rem(18);
+        color: #000;
+        transition: all .3s ease-in-out;
+        margin-right: 24px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            &::after {
+                content: url(../img/breadcrumb-arrow.svg);
+                margin-left: 24px;
+            }
+        }
+    }
+
+    &__link {
+        color: #000;
+        opacity: 0.5;
+
+        &:hover {
+            color: $red;
+            opacity: 1;
+        }
+    }
+}
+
 .pagination {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));

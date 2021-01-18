@@ -1,0 +1,234 @@
+.product-details {
+    padding: 50px 0;
+    @include media-m {
+        padding: 0;
+    }
+
+    &__row {
+        display: flex;
+        margin: 0 -30px;
+        flex-wrap: wrap;
+        @include media-l {
+            margin: 0;
+        }
+    }
+
+    &__gallery,
+    &__info {
+        padding: 0 30px;
+        width: 50%;
+        @include media-l {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    &__gallery {
+        @include media-l {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__more {
+        margin-top: 70px;
+    }
+}
+
+.product-gallery {
+    &__top {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        .swiper-slide {
+            width: 100%;
+            padding-bottom: 68.46%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__thumbs {
+        width: 100%;
+        margin-top: 45px;
+        position: relative;
+        padding: 18px 10px;
+        background: $grey-background-2;
+
+        .swiper-slide {
+            width: 150px;
+            height: 124px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            border: 2px solid transparent; 
+        }
+
+        .swiper-slide-active{
+            border-color: $red;    
+        }
+    }
+}
+
+.product-info {
+    &__item {
+        margin-bottom: 30px;
+        min-height: 63px;
+
+        &:last-child {
+            @include media-l {
+                margin-bottom: 0;
+            }
+        }
+
+        &_button {
+            text-align: center;
+
+            &:last-child {
+                @include media-l {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        &_main {
+            @include media-m {
+                min-height: auto;
+                margin-bottom: 25px;
+
+                &:last-child {
+                    @include media-l {
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__title {
+        font-family: 'Roboto', sans-serif;
+        color: #000;
+        font-size: rem(22);
+        margin-bottom: 12px;
+
+        &_main {
+            font-size: rem(32);
+            margin-bottom: 0;
+        }
+    }
+
+    &__descr {
+        font-weight: 200;
+        font-size: rem(18);
+        opacity: 0.75;
+    }
+}
+
+.product-more {
+    &__tabs {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: rem(22);
+        color: #000;
+        opacity: 0.5;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+
+        &.active {
+            opacity: 1;
+            text-decoration: underline;
+            cursor: auto;
+        }
+    }
+
+    &__content {
+        display: none;
+        font-family: "HelveticaNeueCyr", 'Roboto', sans-serif;
+        font-size: 16px;
+        line-height: 1.3;
+        color: $black-light;
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.product-spec {
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        opacity: 1;
+        margin-right: 15px;
+    }
+
+    &__descr {
+        opacity: .75;
+    }
+}
+
+.product-list {
+    padding: 0;
+
+    &__slider {
+        position: relative;
+    }
+
+    &__headline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 200;
+        font-size: 22px;    
+        color: #000;
+        opacity: 0.75;
+    }
+
+    .items-list-item {
+        padding-bottom: 0;
+        border-bottom: none;
+        margin-bottom: 0;
+
+        &__title {
+            color: #000;
+            margin-bottom: 20px;
+            height: auto;
+        }
+
+        &__picture {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            .items-list-item__title {
+                color: $red;
+            }
+        }
+    }
+
+    &__button {
+        text-align: center;
+        margin-top: 30px;
+    }
+}
