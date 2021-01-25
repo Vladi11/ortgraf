@@ -305,7 +305,7 @@ window.jQuery = window.$ = $;
       delay: 3000
     }
   });
-  var sliderProjectsMaterials = new Swiper('.projects-materials__slider>.swiper-container', {
+  var sliderProjectsMaterials = new Swiper('.projects-materials__slider .swiper-container', {
     slidesPerView: 'auto',
     spaceBetween: 10,
     scrollbar: {
@@ -314,11 +314,10 @@ window.jQuery = window.$ = $;
       draggable: true
     }
   });
-  var sliderProjectsThumbs = new Swiper('.projects-gallery__thumbs>.swiper-container', {
+  var sliderProjectsThumbs = new Swiper('.projects-gallery__thumbs .swiper-container', {
     slidesPerView: 'auto',
     spaceBetween: 20,
     centeredSlides: true,
-    touchRatio: 0.2,
     slideToClickedSlide: true,
     scrollbar: {
       el: '.projects-gallery__scrollbar',
@@ -326,7 +325,7 @@ window.jQuery = window.$ = $;
       draggable: true
     }
   });
-  var sliderProjectsGalleryTop = new Swiper('.projects-gallery__top>.swiper-container', {
+  var sliderProjectsGalleryTop = new Swiper('.projects-gallery__top .swiper-container', {
     spaceBetween: 20,
     slidesPerView: 1,
     navigation: {

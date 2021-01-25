@@ -123,7 +123,7 @@ $(document).ready(function () {
         },
     });
 
-    let sliderProjectsMaterials = new Swiper('.projects-materials__slider>.swiper-container', {
+    let sliderProjectsMaterials = new Swiper('.projects-materials__slider .swiper-container', {
         slidesPerView: 'auto',
         spaceBetween: 10,
         scrollbar: {
@@ -133,11 +133,10 @@ $(document).ready(function () {
         }
     });
 
-    let sliderProjectsThumbs = new Swiper('.projects-gallery__thumbs>.swiper-container', {
+    let sliderProjectsThumbs = new Swiper('.projects-gallery__thumbs .swiper-container', {
         slidesPerView: 'auto',
         spaceBetween: 20,
         centeredSlides: true,
-        touchRatio: 0.2,
         slideToClickedSlide: true,
         scrollbar: {
             el: '.projects-gallery__scrollbar',
@@ -146,7 +145,7 @@ $(document).ready(function () {
         }
     });
 
-    let sliderProjectsGalleryTop = new Swiper('.projects-gallery__top>.swiper-container', {
+    let sliderProjectsGalleryTop = new Swiper('.projects-gallery__top .swiper-container', {
         spaceBetween: 20,
         slidesPerView: 1,
         navigation: {
