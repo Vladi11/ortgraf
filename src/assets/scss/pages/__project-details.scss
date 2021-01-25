@@ -237,6 +237,10 @@
         background: $grey-background-2;
         position: relative;
 
+        .projects-gallery__container {
+            overflow: hidden;
+        }
+
         .swiper-slide {
             width: 150px;
             height: 124px;
@@ -249,6 +253,12 @@
 
         .swiper-slide-active{
             border-color: $red;    
+        }
+
+        .swiper-container {
+            max-width: 150px;
+            margin: 0;
+            overflow: visible;
         }
     }
 

@@ -547,9 +547,9 @@ a {
 }
 
 .pagination {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
-    grid-gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
     max-width: 545px;
     margin: 0 auto 50px;
 
@@ -566,6 +566,11 @@ a {
         border: 1px solid $black;
         transition: all 0.4s ease-in-out;
         margin: 0 auto;
+        margin-bottom: 15px;
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
 
         &:hover {
             background-color: $white;
